@@ -3,7 +3,7 @@ import {Section} from "../section/section";
 import {SkillList} from "../skill-list/skill-list";
 import {SkillLi} from "../skill-li/skill-li";
 
-export function TechSkills() {
+export function TechSkillsSection() {
   return (
     <Section
       title={"Technical Skills"}

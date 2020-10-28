@@ -1,12 +1,14 @@
 import React from 'react';
 import {Header} from "../header/header";
-import {TechSkills} from "../tech-skills/tech-skills";
+import {TechSkillsSection} from "../tech-skills/tech-skills-section";
+import {WorkExperienceSection} from "../work-experience/work-experience-section";
 
 export function Resume() {
   return (
     <div className="content-wrapper">
       <Header/>
-      <TechSkills/>
+      <TechSkillsSection/>
+      <WorkExperienceSection/>
     </div>
   )
 }
