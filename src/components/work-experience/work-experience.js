@@ -2,7 +2,7 @@ import React from 'react';
 import {Section} from "../section/section";
 import {Experience} from "./experience";
 
-export function WorkExperienceSection() {
+export function WorkExperience() {
   return (
     <Section
       title={"Work Experience"}
