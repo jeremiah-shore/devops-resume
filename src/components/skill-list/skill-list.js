@@ -12,5 +12,5 @@ export function SkillList(props) {
 
 SkillList.propTypes = {
   //todo: this doesn't actually work as intended; fix it!
-  children: PropTypes.arrayOf(PropTypes.instanceOf(SkillLi)).isRequired
+  children: PropTypes.arrayOf(PropTypes.instanceOf(SkillLi)),
 };

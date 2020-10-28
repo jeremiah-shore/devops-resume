@@ -27,12 +27,12 @@ export function WorkExperience() {
         timeRange={"Feb 2014 – Present "}
       >
         <ul>
-          <li>coloradovoicestudios.com  |  Jun 2016 - Present</li>
-          <li>creativelycannabis.com  |  Mar 2019 – Apr 2020</li>
-          <li>nuvegfood.com  |  Oct 2018 – Jun 2019</li>
-          <li>strictlyusa.com  |  Dec 2018 – Mar 2019</li>
-          <li>shinspiano.com (retired)  |  Feb 2014 - Apr 2019</li>
-          <li>friscowine.com (retired)  |  Nov 2017 – Jan 2018</li>
+          <li><a href="https://coaltmeds.com" target="_blank">coaltmeds.com</a>  |  Sept 2020 - Present</li>
+          <li><a href="https://www.coloradovoicestudios.com/" target="_blank">coloradovoicestudios.com</a>  |  Jun 2016 - Present</li>
+          <li><a href="http://creativelycannabis.com/" target="_blank">creativelycannabis.com</a>  |  Mar 2019 – Apr 2020</li>
+          <li><a href="https://www.nuvegfood.com/" target="_blank">nuvegfood.com</a>  |  Oct 2018 – Jun 2019</li>
+          <li><a href="http://www.strictlyusa.com/" target="_blank">strictlyusa.com</a>  |  Dec 2018 – Mar 2019</li>
+          <li><a href="https://github.com/jeremiah-shore/shins-piano" target="_blank">shinspiano.com</a> (retired)  |  Feb 2014 - Apr 2019</li>
         </ul>
       </Experience>
       
