@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export function SkillLi(props) {
   return (
@@ -12,3 +13,8 @@ export function SkillLi(props) {
     </li>
   )
 }
+
+SkillLi.propTypes = {
+  title: PropTypes.string.isRequired,
+  skills: PropTypes.arrayOf(PropTypes.string).isRequired
+};
