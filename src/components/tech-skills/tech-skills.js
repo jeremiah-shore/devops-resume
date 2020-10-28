@@ -1,5 +1,6 @@
 import React from 'react';
 import {Section} from "../section/section";
+import {SkillList} from "../skill-list/skill-list";
 
 export function TechSkills() {
   return (
@@ -7,7 +8,9 @@ export function TechSkills() {
       title={"Technical Skills"}
       extraText={"(strongest to weakest, left to right)"}
     >
-    
+      <SkillList>
+        
+      </SkillList>
     </Section>
   )
 }
