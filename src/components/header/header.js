@@ -5,7 +5,7 @@ export function Header() {
     <header>
       
       <div className="brand">
-        <img src="" alt="logo"/>
+        <img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="logo"/>
         <h1>Jeremiah Shore</h1>
         <p className="brand__title">Software Developer & IT Specialist</p>
         <p className="brand__tagline">6+ years of experience building websites, apps, & games</p>
