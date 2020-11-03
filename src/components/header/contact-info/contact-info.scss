@@ -1,0 +1,36 @@
+.contact {
+  &__list {
+    list-style: none;
+    font-size: 1.8rem;
+    font-weight: 300;
+    width: fit-content;
+    margin: 3rem auto;
+
+    a {
+      text-decoration: none;
+    }
+
+    & > li {
+      padding-bottom: .5rem;
+
+      svg {
+        position: relative;
+        top: 5px;
+        left: -10px;
+        color: #666;
+      }
+    }
+
+    &--address {
+
+    }
+
+    &--email {
+
+    }
+
+    &--phone {
+
+    }
+  }
+}
