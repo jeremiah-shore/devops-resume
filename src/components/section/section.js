@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './section.scss';
 
 export function Section(props) {
   return (
@@ -8,9 +9,6 @@ export function Section(props) {
     >
       <h2 className="section__title">
         {props.title}
-        { props.extraText &&
-          <span className="section__title--extra-text">{props.extraText}</span>
-        }
       </h2>
       <div className="section__content">
         {props.children}

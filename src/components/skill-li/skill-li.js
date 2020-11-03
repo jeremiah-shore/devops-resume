@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './skill-li.scss';
 
 export function SkillLi(props) {
   return (
-    <li>
+    <li className="skill-li">
       <span className="skill-li__title">
         {props.title + ': '}
       </span>

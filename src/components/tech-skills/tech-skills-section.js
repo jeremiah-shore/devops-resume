@@ -7,7 +7,6 @@ export function TechSkillsSection() {
   return (
     <Section
       title={"Technical Skills"}
-      extraText={"(strongest to weakest, left to right)"}
     >
 
         <SkillList>
