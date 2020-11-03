@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './experience.scss';
 
 export function Experience(props) {
   return (
@@ -7,13 +8,16 @@ export function Experience(props) {
       <h3 className="experience__heading">
         <span className="experience__heading--job-title">
           {props.jobTitle} {props.jobTitleActual &&
-            <span className="experience__heading--job-title-actual">
-              {props.jobTitleActual}
-            </span>
+            <>
+              <br/>
+              <span className="experience__heading--job-title-actual">
+                {"(" + props.jobTitleActual + ")"}
+              </span>
+            </>
           }
-        </span> —
+        </span><br/>
         <span className="experience__heading--companyName">
-          {props.companyName}
+          {"@ " + props.companyName}
         </span>
       </h3>
       <p className="experience__timeRange">
