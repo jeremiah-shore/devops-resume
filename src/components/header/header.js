@@ -1,31 +1,13 @@
 import React from 'react';
 import './header.scss';
 import {Brand} from "./brand/brand";
+import {ContactInfo} from "./contact-info/contact-info";
 
 export function Header() {
   return (
     <header>
-      
       <Brand/>
-      
-      <div className="contact-info">
-        <ul>
-          <li>
-            Denver, CO 80247
-          </li>
-          <li>
-            <a href="mailto:contact@jeremiahshore.net">
-              contact@jeremiahshore.net
-            </a>
-          </li>
-          <li>
-            <a href="tel:7205775465">
-              (720) 577-5465
-            </a>
-          </li>
-        </ul>
-      </div>
-      
+      <ContactInfo/>
     </header>
   )
 }

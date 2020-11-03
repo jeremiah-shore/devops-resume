@@ -3,11 +3,19 @@
 .brand {
   text-align: center;
 
-  &__name {
-
-  }
-
   &__logo {
     max-height: 75px;
+  }
+
+  &__name {
+    font-weight: normal;
+    color: $primary-blue;
+    margin: 1rem 0;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-bottom: .5rem;
   }
 }

@@ -1,3 +1,5 @@
+@import './styles/colors.scss';
+
 html {
   font-size: 62.5%;
 }
@@ -24,6 +26,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   line-height: 1;
+  color: $dark;
+  font-size: 1.6rem;
 }
 
 blockquote, q {
@@ -52,7 +56,6 @@ h3 {
   font-size: 2rem;
 }
 
-p, ul, ol {
-  font-size: 1.6rem;
+ul, ol {
   margin-left: 1.6rem;
 }
