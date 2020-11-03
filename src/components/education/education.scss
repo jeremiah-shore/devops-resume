@@ -1,0 +1,12 @@
+@import '../../styles/colors.scss';
+
+.education {
+  &__subheading {
+    color: $primary-blue;
+    margin-bottom: 1rem;
+  }
+
+  &__subsection {
+    margin: 2rem 0;
+  }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import {Section} from "../section/section";
 import {SimpleList} from "../simple-list/simple-list";
 import {SkillLi} from "../skill-li/skill-li";
+import './education.scss';
 
 export function Education() {
   return (
@@ -13,8 +14,12 @@ export function Education() {
             Blue Ridge Community & Technical College
           </h3>
           <SimpleList>
-            <li>AAS Computer Network Engineering Technologies</li>
-            <li>AAS Information Technology</li>
+            <li>
+              AAS Computer Network Engineering Technologies
+            </li>
+            <li>
+              AAS Information Technology
+            </li>
           </SimpleList>
         </div>
         

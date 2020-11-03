@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './simple-list.scss';
 
 export function SimpleList(props) {
   return (

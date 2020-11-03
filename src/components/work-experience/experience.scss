@@ -1,6 +1,8 @@
 @import '../../styles/colors.scss';
 
 .experience {
+  margin: 3rem 0;
+
   &__heading {
     font-weight: bold;
     margin: 1.5rem 0 .8rem;
@@ -20,7 +22,7 @@
   }
 
   &__timeRange {
-    margin: 1rem 0;
+    margin: .7rem 0;
     font-style: italic;
     font-weight: 300;
   }
