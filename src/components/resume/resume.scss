@@ -1,0 +1,26 @@
+@import '../../styles/colors.scss';
+
+.resume__container {
+  h1, h2, h3, h4, h5, h6 {
+    color: $dark;
+  }
+}
+
+.resume__wrapper {
+  background-color: white;
+  padding: 20px;
+}
+
+
+//.resume__container {
+//  background-color: $dark;
+//  padding: 50px 0;
+//}
+//
+//.resume__wrapper {
+//  background-color: white;
+//  max-width: 984px;
+//  margin: auto;
+//  box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+//  padding: 40px;
+//}
