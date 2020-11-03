@@ -58,9 +58,14 @@ h3 {
 
 ul, ol {
   margin-left: 1.6rem;
+  font-weight: 300;
+
+  li {
+    padding-bottom: .5rem;
+  }
 }
 
 a, a:visited, a:focus {
   color: $secondary-green;
-  text-decoration: underline;
+  text-decoration: none;
 }

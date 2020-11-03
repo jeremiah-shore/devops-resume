@@ -1,4 +1,5 @@
 import React from 'react';
+import {CustomHr} from "../custom-hr/custom-hr";
 
 export function Footer() {
   return (
@@ -8,14 +9,7 @@ export function Footer() {
         fontWeight: 300,
       }}
     >
-      <div
-        style={{
-          height: "2px",
-          backgroundColor: "rgba(0, 0, 0, 0.1)",
-          margin: "2rem 0",
-          borderRadius: "1px"
-        }}
-      />
+      <CustomHr/>
       References, work history—including 9+ years of IT industry experience—and certifications made available upon request.
     </footer>
   )
