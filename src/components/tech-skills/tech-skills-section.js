@@ -32,7 +32,7 @@ export function TechSkillsSection() {
           />
           <SkillLi
             title={"dev tools"}
-            skills={['IntelliJ', 'Git', 'Maven', 'Postman', 'VS Code', 'Unity', 'Docker', 'Gradle', ]}
+            skills={['IntelliJ', 'Git', 'Maven', 'Postman', 'VS Code', 'Unity', 'Gradle', ]}
           />
           <SkillLi
             title={"workflow"}
