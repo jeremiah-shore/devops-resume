@@ -6,6 +6,7 @@ import {PersonalProjects} from "../personal-projects/personal-projects";
 import {Education} from "../education/education";
 import {Footer} from "../footer/footer";
 import './resume.scss';
+import {VisitorCount} from "../visitor-count/visitor-count";
 
 export function Resume() {
   return (
@@ -18,6 +19,8 @@ export function Resume() {
         <Education/>
         <Footer/>
       </div>
+      
+      <VisitorCount/>
     </div>
   )
 }
