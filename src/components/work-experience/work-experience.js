@@ -7,6 +7,7 @@ export function WorkExperience() {
     <Section
       title={"Work Experience"}
     >
+      
       <Experience
         jobTitle={"Software Engineer"}
         companyName={"Zicasso"}

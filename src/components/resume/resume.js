@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Header} from "../header/header";
-import {TechSkillsSection} from "../tech-skills/tech-skills-section";
+import {SkillSection} from "../tech-skills/skill-section";
 import {WorkExperience} from "../work-experience/work-experience";
 import {PersonalProjects} from "../personal-projects/personal-projects";
 import {Education} from "../education/education";
@@ -26,8 +26,13 @@ export function Resume() {
           phone={user.phone}
           email={user.email}
         />
-        <TechSkillsSection/>
-        <WorkExperience/>
+        <SkillSection
+          skills={user.skills}
+          title={"Technical Skills"}
+        />
+        <WorkExperience
+          experience={user.experience}
+        />
         <PersonalProjects/>
         <Education/>
         <Footer/>
