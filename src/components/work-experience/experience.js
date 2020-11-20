@@ -21,13 +21,27 @@ export function Experience(props) {
         </span>
       </h3>
       <p className="experience__timeRange">
-        {props.timeRange}
+        {`${formatTimeRange(props.start, props.end)}`}
       </p>
       <div className="experience__content">
-        {props.children}
+        <ul>
+          {props.jobExperiences?.map(job =>
+            <li>{job?.description} ({job?.keywords?.join(', ')})</li>
+          )}
+        </ul>
       </div>
     </div>
   )
+}
+
+function formatMonth(ordinal) {
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+  return months[ordinal];
+}
+
+function formatTimeRange(start, end) {
+  const endRange = end ? `${formatMonth(end?.month)} ${end?.year}` : 'present';
+  return `${formatMonth(start?.month)} ${start?.year} — ${endRange}`;
 }
 
 Experience.propTypes = {

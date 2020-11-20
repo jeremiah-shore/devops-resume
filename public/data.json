@@ -58,7 +58,7 @@
           "keywords": ["TypeScript", "Node", "API", "Jest", "Axios", "integration", "SDK"]
         },
         {
-          "description": "enabled phased migration support of multi-million dollar <a href=\"https://zicasso.com\">zicasso.com</a>",
+          "description": "enabled phased migration support of multi-million dollar zicasso.com",
           "keywords": ["CloudFront", "Lambda", "Lambda@Edge", "CloudFormation", "Node", "Axios", "API", "serverless"]
         },
         {
@@ -85,27 +85,27 @@
       },
       "job_experiences": [
         {
-          "description": "<a href=\"coaltmeds.com\">coaltmeds.com</a> | Sept 2020 - Present",
+          "description": "coaltmeds.com | Sept 2020 - Present",
           "keywords": ["React", "Node", "JavaScript", "Helmut", "AWS", "CloudFront", "S3", "SSL"]
         },
         {
-          "description": "<a href=\"coloradovoicestudios.com\">coloradovoicestudios.com</a> | Jun 2016 - Present",
+          "description": "coloradovoicestudios.com | Jun 2016 - Present",
           "keywords": ["WordPress", "HTML", "CSS", "JavaScript", "copy writing"]
         },
         {
-          "description": "<a href=\"creativelycannabis.com\">creativelycannabis.com</a> | Mar 2019 – Apr 2020",
+          "description": "creativelycannabis.com | Mar 2019 – Apr 2020",
           "keywords": ["Bootstrap", "HTML", "CSS", "JavaScript", "jQuery", "copy writing"]
         },
         {
-          "description": "<a href=\"nuvegfood.com\">nuvegfood.com</a> | Oct 2018 – Jun 2019",
+          "description": "nuvegfood.com | Oct 2018 – Jun 2019",
           "keywords": ["WIX", "HTML", "CSS"]
         },
         {
-          "description": "<a href=\"strictlyusa.com\">strictlyusa.com</a> | Dec 2018 – Mar 2019",
+          "description": "strictlyusa.com | Dec 2018 – Mar 2019",
           "keywords": ["3dCart", "HTML", "CSS", "JavaScript"]
         },
         {
-          "description": "<a href=\"shinspiano.jeremiahshore.net\">shinspiano.com</a> (retired) | Feb 2014 - Apr 2019\n",
+          "description": "shinspiano.com (retired) | Feb 2014 - Apr 2019\n",
           "keywords": ["Bootstrap", "HTML", "CSS", "JavaScript", "jQuery", "AWS", "S3", "copy writing"]
         }
       ]
@@ -129,19 +129,19 @@
         },
         {
           "description": "bug fixing, product management, design, and ongoing dev for internal software",
-          "keywords": [".NET", "WinForms", "DevExpress", "MSSQL", "SQL"]
+          "keywords": [".NET", "WinForms", "DevExpress", "MSSQL"]
         },
         {
           "description": "automated data health reports with console app, including email document export to assist in cleanup",
-          "keywords": ["Java", "MSSQL", "SQL"]
+          "keywords": ["Java", "MSSQL"]
         },
         {
           "description": "created effective customer data access powered by regular scripted updates",
-          "keywords": ["Google Sheets", "JavaScript", "MSSQL", "SQL"]
+          "keywords": ["Google Sheets", "JavaScript", "MSSQL"]
         },
         {
           "description": "performed regular database administration, including: reporting, hosting, backups, and maintenance",
-          "keywords": ["MSSQL", "SQL"]
+          "keywords": ["MSSQL"]
         },
         {
           "description": "automated marketing workflows in MailChimp, including a ZOHO integration using Zapier",
