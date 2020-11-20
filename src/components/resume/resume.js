@@ -33,7 +33,9 @@ export function Resume() {
         <WorkExperience
           experience={user.experience}
         />
-        <PersonalProjects/>
+        <PersonalProjects
+          projects={user.projects}
+        />
         <Education/>
         <Footer/>
       </div>

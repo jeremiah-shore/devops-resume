@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './experience.scss';
+import {Accomplishment} from "../accomplishment/accomplishment";
 
 export function Experience(props) {
   return (
@@ -26,7 +27,10 @@ export function Experience(props) {
       <div className="experience__content">
         <ul>
           {props.jobExperiences?.map(job =>
-            <li>{job?.description} ({job?.keywords?.join(', ')})</li>
+            <Accomplishment
+              description={job?.description}
+              keywords={job?.keywords}
+            />
           )}
         </ul>
       </div>
