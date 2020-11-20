@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
-import { Resume } from "./components/resume/resume";
+import {App} from "./components/app/app";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Resume/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
