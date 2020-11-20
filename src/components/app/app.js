@@ -1,12 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {Resume} from "../resume/resume";
+import {fetchJsonData} from "../../utils/data";
 
 export function App() {
   const [user, setUser] = useState({});
   useEffect(() => {
-    fetchUserData().then(data => {
-      setUser(data);
-    })
+    fetchJsonData('/data/jeremiah_data.json').then(setUser);
   }, []);
   return (
     <Resume
@@ -14,17 +13,3 @@ export function App() {
     />
   )
 }
-
-const fetchUserData = () => {
-  return fetch('data.json',
-    {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      }
-    }
-  ).then(response => {
-    console.log(response);
-    return response.json();
-  });
-};
