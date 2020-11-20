@@ -31,10 +31,14 @@ export function Resume(props) {
         <PersonalProjects
           projects={user?.projects}
         />
-        <Education/>
-        <Footer/>
+        <Education
+          education={user?.education}
+          certifications={user?.certifications}
+        />
+        <Footer>
+          {user?.footnote}
+        </Footer>
       </div>
-      
       <VisitorCount/>
     </div>
   )

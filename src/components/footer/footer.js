@@ -1,7 +1,7 @@
 import React from 'react';
 import {CustomHr} from "../custom-hr/custom-hr";
 
-export function Footer() {
+export function Footer(props) {
   return (
     <footer
       style={{
@@ -10,7 +10,7 @@ export function Footer() {
       }}
     >
       <CustomHr/>
-      References, work history—including 9+ years of IT industry experience—and certifications made available upon request.
+      {props.children}
     </footer>
   )
 }
