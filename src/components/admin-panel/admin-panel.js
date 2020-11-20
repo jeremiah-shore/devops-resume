@@ -10,7 +10,8 @@ export function AdminPanel(props) {
   const [discouragedKeywords, setDiscouragedKeywords] = useState(["C#", ".NET", "MSSQL"]);
   const addEkw = keyword => setEncouragedKeywords(encouragedKeywords => [...encouragedKeywords, keyword]);
   const addDkw = keyword => setDiscouragedKeywords(discouragedKeywords => [...discouragedKeywords, keyword]);
-  //const removeEky = keyword =>
+  const removeEkw = keyword => setEncouragedKeywords(encouragedKeywords => [...encouragedKeywords.filter(e => e !== keyword)]);
+  const removeDkw = keyword => setDiscouragedKeywords(discouragedKeywords => [...discouragedKeywords.filter(e => e !== keyword)]);
   
   return (
     <div className="admin-panel-wrapper">
@@ -85,13 +86,7 @@ export function AdminPanel(props) {
                 encouraged keywords
               </p>
               <p style={{ fontWeight: "300" }}>
-                {encouragedKeywords.map(kw =>
-                  <Chip
-                    label={kw}
-                    onDelete={() => {}}
-                    style={{ fontSize: "1.5rem", margin: "0 5px 5px"}}
-                  />
-                )}
+                {encouragedKeywords.map(kw => <DeletableKeywordChip label={kw} onDelete={removeEkw} key={kw}/>)}
               </p>
             </div>
             <div className="discouraged" style={{ maxWidth: "50%" }}>
@@ -100,11 +95,7 @@ export function AdminPanel(props) {
               </p>
               <p style={{ fontWeight: "300" }}>
                 {discouragedKeywords.map(kw =>
-                  <Chip
-                    label={kw}
-                    onDelete={() => {}}
-                    style={{ fontSize: "1.5rem", margin: "0 5px 10px"}}
-                  />
+                  <DeletableKeywordChip label={kw} onDelete={removeDkw} key={kw}/>
                 )}
               </p>
             </div>
@@ -113,5 +104,16 @@ export function AdminPanel(props) {
         }
       </div>
     </div>
+  )
+}
+
+function DeletableKeywordChip(props) {
+  return(
+    <Chip
+      label={props.label}
+      onDelete={() => props.onDelete(props.label)}
+      style={{ fontSize: "1.5rem", margin: "0 5px 10px"}}
+      key={props.key}
+    />
   )
 }
