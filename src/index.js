@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
-import {Resume} from "./components/resume/resume";
+import { Resume } from "./components/resume/resume";
 
 ReactDOM.render(
   <React.StrictMode>

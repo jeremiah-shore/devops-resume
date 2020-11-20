@@ -1,0 +1,215 @@
+{
+  "first_name": "Jeremiah",
+  "last_name": "Shore",
+  "title": "Software Developer & IT Specialist",
+  "tagline": "6+ years of building websites, apps, & games",
+  "email": "contact@jeremiahshore.net",
+  "phone": "(720) 577-5465",
+  "location": {
+    "address": "Denver, CO 80247",
+    "link": "https://goo.gl/maps/u4n8teefqfNWgsjq5"
+  },
+  "skills": [
+    {
+      "label": "code",
+      "skills": ["Java", "TypeScript", "JavaScript", "Node", "SQL", "NoSQL", "C#"]
+    },
+    {
+      "label": "AWS",
+      "skills": ["AWS-CLI", "Lambda", "Cloudfront", "CodeBuild", "CodePipeline", "S3", "DynamoDB", "ElasticSearch", "Route 53", "EC2"]
+    },
+    {
+      "label": "libraries",
+      "skills": ["Lombok", "Jackson", "AsyncHttp", "Puppeteer", "Gson"]
+    },
+    {
+      "label": "frameworks",
+      "skills": ["SparkJava", "JUnit", "Mockito", "Spring", "Jest", "jQuery", "JPA / Hibernate", "Bootstrap", "MonoBehavior", "NET"]
+    },
+    {
+      "label": "web",
+      "skills": ["REST", "HTML", "CSS", "AJAX", "Amazon Web Services", "Google Search Console", "Google Analytics", "WordPress", "WIX"]
+    },
+    {
+      "label": "dev tools",
+      "skills": ["IntelliJ", "Git", "Maven", "Postman", "VS Code", "Unity", "Gradle"]
+    },
+    {
+      "label": "workflow",
+      "skills": ["GitHub", "Jira", "GSuite", "MS Office", "Trello", "Slack", "Zapier"]
+    },
+    {
+      "label": "network",
+      "skills": ["TCP/IP", "LAN", "DNS", "FTP", "firewall/ACL", "WAN"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Zicasso",
+      "title": "Software Engineer",
+      "current_employer": true,
+      "start_date": {
+        "month": 5,
+        "year": 2019
+      },
+      "job_experiences": [
+        {
+          "description": "contributed to custom SDK, including back-end services and integration testing",
+          "keywords": ["TypeScript", "Node", "API", "Jest", "Axios", "integration", "SDK"]
+        },
+        {
+          "description": "enabled phased migration support of multi-million dollar <a href=\"https://zicasso.com\">zicasso.com</a>",
+          "keywords": ["CloudFront", "Lambda", "Lambda@Edge", "CloudFormation", "Node", "Axios", "API", "serverless"]
+        },
+        {
+          "description": "implemented discounts and promotions on marageti.com through multiple vendor integrations and updates across its full stack",
+          "keywords": ["Java", "SparkJava", "Lambda", "CloudFormation", "API", "REST", "Angular"]
+        },
+        {
+          "description": "enhanced CI/CD lifecycle with features and notifications to development team, including results from Google PageSpeedInsights",
+          "keywords": ["CloudWatch Events", "CodePipeline", "CodeBuild", "Lambda", "Node", "API"]
+        },
+        {
+          "description": "collaborated on a small team of talented developers using cutting-edge and bleeding-edge technologies using an agile hybrid process of scrum and kanban",
+          "keywords": ["agile", "scrum", "kanban", "scrum-ban"]
+        }
+      ]
+    },
+    {
+      "company": "Self Employed",
+      "title": "Freelance Web Developer",
+      "currently_employed": true,
+      "start_date": {
+        "month": 2,
+        "year": 2014
+      },
+      "job_experiences": [
+        {
+          "description": "<a href=\"coaltmeds.com\">coaltmeds.com</a> | Sept 2020 - Present",
+          "keywords": ["React", "Node", "JavaScript", "Helmut", "AWS", "CloudFront", "S3", "SSL"]
+        },
+        {
+          "description": "<a href=\"coloradovoicestudios.com\">coloradovoicestudios.com</a> | Jun 2016 - Present",
+          "keywords": ["WordPress", "HTML", "CSS", "JavaScript", "copy writing"]
+        },
+        {
+          "description": "<a href=\"creativelycannabis.com\">creativelycannabis.com</a> | Mar 2019 – Apr 2020",
+          "keywords": ["Bootstrap", "HTML", "CSS", "JavaScript", "jQuery", "copy writing"]
+        },
+        {
+          "description": "<a href=\"nuvegfood.com\">nuvegfood.com</a> | Oct 2018 – Jun 2019",
+          "keywords": ["WIX", "HTML", "CSS"]
+        },
+        {
+          "description": "<a href=\"strictlyusa.com\">strictlyusa.com</a> | Dec 2018 – Mar 2019",
+          "keywords": ["3dCart", "HTML", "CSS", "JavaScript"]
+        },
+        {
+          "description": "<a href=\"shinspiano.jeremiahshore.net\">shinspiano.com</a> (retired) | Feb 2014 - Apr 2019\n",
+          "keywords": ["Bootstrap", "HTML", "CSS", "JavaScript", "jQuery", "AWS", "S3", "copy writing"]
+        }
+      ]
+    },
+    {
+      "company": "Bandwave Systems",
+      "title": "Technology Specialist",
+      "currently_employed": false,
+      "start_date": {
+        "month": 4,
+        "year": 2014
+      },
+      "end_date": {
+        "month": 10,
+        "year": 2017
+      },
+      "job_experiences": [
+        {
+          "description": "automated 4G usage reporting through integration with hardware vendor API, enabling significant increase to monthly revenue stream through enforcement of overage charges stated in contracts",
+          "keywords": ["Java", "REST", "OAuth", "JSON", "JavaFX", "API"]
+        },
+        {
+          "description": "bug fixing, product management, design, and ongoing dev for internal software",
+          "keywords": [".NET", "WinForms", "DevExpress", "MSSQL", "SQL"]
+        },
+        {
+          "description": "automated data health reports with console app, including email document export to assist in cleanup",
+          "keywords": ["Java", "MSSQL", "SQL"]
+        },
+        {
+          "description": "created effective customer data access powered by regular scripted updates",
+          "keywords": ["Google Sheets", "JavaScript", "MSSQL", "SQL"]
+        },
+        {
+          "description": "performed regular database administration, including: reporting, hosting, backups, and maintenance",
+          "keywords": ["MSSQL", "SQL"]
+        },
+        {
+          "description": "automated marketing workflows in MailChimp, including a ZOHO integration using Zapier",
+          "keywords": ["marketing", "CRM"]
+        },
+        {
+          "description": "migrated PRTG network monitoring into cloud hosting, dramatically increasing data reliability and accuracy",
+          "keywords": ["AWS", "EC2"]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "description": "web scraper to gather market research data for an app/website related to open mics",
+      "keywords": ["Node", "Puppeteer", "web scraping"]
+    },
+    {
+      "description": "augmented reality business card as a proof of concept and learning experiment",
+      "keywords": ["Unity", "Vuforia", "Blender"]
+    }
+  ],
+  "education": [
+    {
+      "institution_name": "Blue Ridge Community & Technical College",
+      "credentials": [
+        {
+          "degree": "AAS",
+          "field": "Computer Network Engineering Technologies"
+        },
+        {
+          "degree": "AAS",
+          "field": "Information Technology"
+        }
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "nickname": "AWS CCP",
+      "issuer": "Amazon Web Services",
+      "status": "active"
+    },
+    {
+      "name": "Cisco Certified Network Associate",
+      "nickname": "CCNA",
+      "issuer": "Cisco",
+      "status": "expired"
+    },
+    {
+      "name": "CompTIA A+",
+      "nickname": "A+",
+      "issuer": "CompTIA",
+      "status": "expired"
+    },
+    {
+      "name": "CompTIA Network+",
+      "nickname": "Network+",
+      "issuer": "CompTIA",
+      "status": "expired"
+    },
+    {
+      "name": "CompTIA Security+",
+      "nickname": "Security+",
+      "issuer": "CompTIA",
+      "status": "expired"
+    }
+  ],
+  "footnote": "References, work history—including 9+ years of IT industry experience—and certifications made available upon request."
+}

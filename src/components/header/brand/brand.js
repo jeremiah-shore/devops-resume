@@ -1,7 +1,7 @@
 import React from 'react';
 import './brand.scss';
 
-export function Brand() {
+export function Brand(props) {
   return(
     <div className="brand">
       <img
@@ -9,9 +9,9 @@ export function Brand() {
         alt="logo"
         className="brand__logo"
       />
-      <h1 className="brand__name">Jeremiah Shore</h1>
-      <p className="brand__title">Software Developer & IT Specialist</p>
-      <p className="brand__tagline">6+ years of experience building websites, apps, & games</p>
+      <h1 className="brand__name">{props.name}</h1>
+      <p className="brand__title">{props.title}</p>
+      <p className="brand__tagline">{props.tagline}</p>
     </div>
   )
 }
