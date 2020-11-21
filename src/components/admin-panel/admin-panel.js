@@ -1,11 +1,16 @@
 import React, {useState} from 'react';
 import TextField from "@material-ui/core/TextField";
-import {AddCircle, ExpandLess} from "@material-ui/icons";
+import {AddCircle, Build, ExpandLess} from "@material-ui/icons";
 import Chip from "@material-ui/core/Chip";
 import IconButton from "@material-ui/core/IconButton";
+import Button from "@material-ui/core/Button";
+import Checkbox from "@material-ui/core/Checkbox";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 export function AdminPanel(props) {
   const [visible, setVisible] = useState(true);
+  const [enableKeywordFilters, setFiltersApplied] = useState(true);
   const [encouragedKeywords, setEncouragedKeywords] = useState(["Java", "React", "AWS"]);
   const [discouragedKeywords, setDiscouragedKeywords] = useState(["C#", ".NET", "MSSQL"]);
   const addEkw = keyword => setEncouragedKeywords(encouragedKeywords => [...encouragedKeywords, keyword]);
@@ -15,16 +20,38 @@ export function AdminPanel(props) {
   
   return (
     <div className="admin-panel-wrapper">
-      <div className="panel-control" style={{ padding: "10px"}} >
-        <IconButton
-          style={{ border: '1px solid rgba(0,0,0,0.25)', margin: " 0 10px" }}
-          onClick={() => setVisible(!visible)}
+      <div className="main-controls" style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", padding: "10px"}}>
+        <div className="panel-toggle" style={{ minWidth: "300px" }}>
+          <IconButton
+            style={{ border: '1px solid rgba(0,0,0,0.25)', margin: " 0 10px" }}
+            onClick={() => setVisible(!visible)}
+          >
+            <ExpandLess size={"large"}/>
+          </IconButton>
+          <p style={{display: 'inline', color: 'rgba(0,0,0,0.5)'}}>
+            {visible ? 'HIDE' : 'EXPAND'} ADMIN PANEL
+          </p>
+        </div>
+        <Button
+          variant={"outlined"}
+          startIcon={<Build/>}
+          onClick={() => props.updateUser()}
         >
-          <ExpandLess size={"large"}/>
-        </IconButton>
-        <p style={{display: 'inline', color: 'rgba(0,0,0,0.5)'}}>
-          {visible ? 'HIDE' : 'EXPAND'} ADMIN PANEL
-        </p>
+          re-render resume
+        </Button>
+        <FormGroup row>
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={enableKeywordFilters}
+                onChange={() => {
+                  setFiltersApplied(!enableKeywordFilters);
+                  
+                }}
+              />}
+            label={"enable keyword filters"}
+          />
+        </FormGroup>
       </div>
       <div className="admin-panel"
         style={{
@@ -85,19 +112,19 @@ export function AdminPanel(props) {
               <p style={{ fontWeight: "600", padding: "1rem" }}>
                 encouraged keywords
               </p>
-              <p style={{ fontWeight: "300" }}>
+              <div style={{ fontWeight: "300" }}>
                 {encouragedKeywords.map(kw => <DeletableKeywordChip label={kw} onDelete={removeEkw} key={kw}/>)}
-              </p>
+              </div>
             </div>
             <div className="discouraged" style={{ maxWidth: "50%" }}>
               <p style={{ fontWeight: "600", padding: "1rem" }}>
                 discouraged keywords
               </p>
-              <p style={{ fontWeight: "300" }}>
+              <div style={{ fontWeight: "300" }}>
                 {discouragedKeywords.map(kw =>
                   <DeletableKeywordChip label={kw} onDelete={removeDkw} key={kw}/>
                 )}
-              </p>
+              </div>
             </div>
           </div>
         </>
@@ -113,7 +140,6 @@ function DeletableKeywordChip(props) {
       label={props.label}
       onDelete={() => props.onDelete(props.label)}
       style={{ fontSize: "1.5rem", margin: "0 5px 10px"}}
-      key={props.key}
     />
   )
 }
