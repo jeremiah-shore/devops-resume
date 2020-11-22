@@ -9,17 +9,27 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 export function AdminPanel(props) {
+  const encouragedKeywords = props.encouragedKeywords;
+  const setEncouragedKeywords = props.setEncouragedKeywords;
+  const discouragedKeywords = props.discouragedKeywordsl;
+  const setDiscouragedKeywords = props.setDiscouragedKeywords;
+  
   const [visible, setVisible] = useState(true);
-  const [enableKeywordFilters, setFiltersApplied] = useState(true);
-  const [encouragedKeywords, setEncouragedKeywords] = useState(["Java", "React", "AWS"]);
-  const [discouragedKeywords, setDiscouragedKeywords] = useState(["C#", ".NET", "MSSQL"]);
+  
   const addEkw = keyword => setEncouragedKeywords(encouragedKeywords => [...encouragedKeywords, keyword]);
   const addDkw = keyword => setDiscouragedKeywords(discouragedKeywords => [...discouragedKeywords, keyword]);
   const removeEkw = keyword => setEncouragedKeywords(encouragedKeywords => [...encouragedKeywords.filter(e => e !== keyword)]);
   const removeDkw = keyword => setDiscouragedKeywords(discouragedKeywords => [...discouragedKeywords.filter(e => e !== keyword)]);
   
   return (
-    <div className="admin-panel-wrapper">
+    <div className="admin-panel-wrapper" style={{
+      position: "fixed",
+      width: "100%",
+      backgroundColor: "#FFF",
+      borderBottom: "3px solid #31849a",
+      zIndex: 10,
+      boxShadow: "0 0 10px 0 black",
+    }}>
       <div className="main-controls" style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", padding: "10px"}}>
         <div className="panel-toggle" style={{ minWidth: "300px" }}>
           <IconButton
@@ -43,9 +53,9 @@ export function AdminPanel(props) {
           <FormControlLabel
             control={
               <Checkbox
-                checked={enableKeywordFilters}
+                checked={props.enableKeywordFilters}
                 onChange={() => {
-                  setFiltersApplied(!enableKeywordFilters);
+                  props.setFiltersApplied(!props.enableKeywordFilters);
                   
                 }}
               />}
@@ -113,7 +123,7 @@ export function AdminPanel(props) {
                 encouraged keywords
               </p>
               <div style={{ fontWeight: "300" }}>
-                {encouragedKeywords.map(kw => <DeletableKeywordChip label={kw} onDelete={removeEkw} key={kw}/>)}
+                {encouragedKeywords?.map(kw => <DeletableKeywordChip label={kw} onDelete={removeEkw} key={kw}/>)}
               </div>
             </div>
             <div className="discouraged" style={{ maxWidth: "50%" }}>
@@ -121,7 +131,7 @@ export function AdminPanel(props) {
                 discouraged keywords
               </p>
               <div style={{ fontWeight: "300" }}>
-                {discouragedKeywords.map(kw =>
+                {discouragedKeywords?.map(kw =>
                   <DeletableKeywordChip label={kw} onDelete={removeDkw} key={kw}/>
                 )}
               </div>
