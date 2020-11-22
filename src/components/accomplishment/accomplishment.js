@@ -1,4 +1,5 @@
 import React from 'react';
+import Chip from "@material-ui/core/Chip";
 
 export function Accomplishment(props) {
   return (
@@ -6,7 +7,20 @@ export function Accomplishment(props) {
       {props.description}
       
       { (props.keywords && props.keywords.length > 0) &&
-        ` (${props.keywords?.join(', ')})`
+        <span>
+          {props.keywords.map(k => <Chip
+            label={k}
+            variant={"outlined"}
+            size={"small"}
+            style={{
+              border: "1px solid #31849b",
+              color: "#31849b",
+              margin: "0 0 0 5px",
+              height: "1.6rem",
+              fontWeight: "600",
+            }}
+          />)}
+        </span>
       }
     </li>
   )
