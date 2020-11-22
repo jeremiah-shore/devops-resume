@@ -40,7 +40,7 @@ export function Experience(props) {
 
 function formatMonth(ordinal) {
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
-  return months[ordinal];
+  return months[ordinal - 1];
 }
 
 function formatTimeRange(start, end) {

@@ -111,6 +111,44 @@
       ]
     },
     {
+      "company": "Initial.IT",
+      "title": "Technology Specialist",
+      "currently_employed": false,
+      "start_date": {
+        "month": 8,
+        "year": 2018
+      },
+      "end_date": {
+        "month": 11,
+        "year": 2018
+      },
+      "job_experiences": [
+        {
+          "description": "on-site desktop, server, and network support for multiple Denver-based engineering firms",
+          "keywords": ["server"]
+        }
+      ]
+    },
+    {
+      "company": "Lewan Technology",
+      "title": "On-Site Systems Administrator",
+      "currently_employed": false,
+      "start_date": {
+        "month": 5,
+        "year": 2018
+      },
+      "end_date": {
+        "month": 8,
+        "year": 2018
+      },
+      "job_experiences": [
+        {
+          "description": "short-term IT staff and on-site desktop, server, and network support for Denver-based businesses",
+          "keywords": ["server"]
+        }
+      ]
+    },
+    {
       "company": "Bandwave Systems",
       "title": "Technology Specialist",
       "currently_employed": false,
@@ -150,6 +188,101 @@
         {
           "description": "migrated PRTG network monitoring into cloud hosting, dramatically increasing data reliability and accuracy",
           "keywords": ["AWS", "EC2"]
+        }
+      ]
+    },
+    {
+      "company": "PC Medics of NJ",
+      "title": "Computer Technician",
+      "currently_employed": false,
+      "start_date": {
+        "month": 11,
+        "year": 2013
+      },
+      "end_date": {
+        "month": 3,
+        "year": 2014
+      },
+      "job_experiences": [
+        {
+          "description": "in-store / on-site residential and small-business computer, network, and accessory repair",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "company": "Unisys",
+      "title": "Dell Certified Onsite Repair Technician",
+      "currently_employed": false,
+      "start_date": {
+        "month": 9,
+        "year": 2013
+      },
+      "end_date": {
+        "month": 11,
+        "year": 2013
+      },
+      "job_experiences": [
+        {
+          "description": "on-site hardware diagnostics and repair of Dell branded devices across greater Philadelphia, PA",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "company": "CompuCom",
+      "title": "Computer Hardware Technician",
+      "currently_employed": false,
+      "start_date": {
+        "month": 6,
+        "year": 2013
+      },
+      "end_date": {
+        "month": 9,
+        "year": 2013
+      },
+      "job_experiences": [
+        {
+          "description": "testing, diagnosis, repair, and inventory processing of assorted computer and point-of-sale hardware",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "company": "Alpha Technologies",
+      "title": "Network Technician",
+      "currently_employed": false,
+      "start_date": {
+        "month": 4,
+        "year": 2012
+      },
+      "end_date": {
+        "month": 5,
+        "year": 2013
+      },
+      "job_experiences": [
+        {
+          "description": "on-site installation, config, and troubleshooting of network, VoIP, and digital PBX equipment",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "company": "Best Buy / Geek Squad",
+      "title": "Counter Intelligence Agent",
+      "currently_employed": false,
+      "start_date": {
+        "month": 9,
+        "year": 2011
+      },
+      "end_date": {
+        "month": 4,
+        "year": 2012
+      },
+      "job_experiences": [
+        {
+          "description": "in-store troubleshooting, repair, and sales experience with consumer electronics and repair services",
+          "keywords": []
         }
       ]
     }
