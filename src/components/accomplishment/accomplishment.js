@@ -1,5 +1,6 @@
 import React from 'react';
 import Chip from "@material-ui/core/Chip";
+import PropTypes from "prop-types";
 
 export function Accomplishment(props) {
   return (
@@ -31,3 +32,8 @@ export function Accomplishment(props) {
     </li>
   )
 }
+
+Accomplishment.propTypes = {
+  description: PropTypes.string.isRequired,
+  keywords: PropTypes.arrayOf(PropTypes.string),
+};

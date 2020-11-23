@@ -1,25 +1,30 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import './experience.scss';
-import {Accomplishment} from "../accomplishment/accomplishment";
 import IconButton from "@material-ui/core/IconButton";
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
-import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import '../../styles/colors.scss';
+import {ExperienceList} from "./experience-list/experience-list";
 
 export function Experience(props) {
   const [include, setInclude] = useState(props.include);
   return (
     <div className="experience">
-      <h3 className="experience__heading">
+      <h3 className="experience__heading"
+        style={{ position: "relative", left: "-20px" }}
+      >
         <IconButton
           onClick={() => setInclude(i => !i)}
           style={{
             marginRight: "10px",
-            color: include ? "#7ab356" : "#a20000",
-            backgroundColor: include ? "#dfffcb" : "#ff8787",
+            color: include ? "#7ab356" : "#31849b",
+            backgroundColor: include ? "#dfffcb" : "transparent",
+            border: include ? `1px solid white` : `1px solid #31849b`
           }}
+          size={"large"}
         >
-          {include ? <CheckCircleOutlineIcon size={"large"}/> : <HighlightOffIcon size={"large"}/>}
+          {include ? <CheckCircleOutlineIcon/> : <AddCircleOutlineIcon/>}
         </IconButton>
         <span className="experience__heading--job-title">
           {props.jobTitle + ' '}
@@ -30,19 +35,15 @@ export function Experience(props) {
           </span>
         }
       </h3>
-      
-      <p className="experience__timeRange">
-        {`${formatTimeRange(props.start, props.end)}`}
-      </p>
-      <div className="experience__content">
-        <ul>
-          {props.jobExperiences?.map(job =>
-            <Accomplishment
-              description={job?.description}
-              keywords={job?.keywords}
-            />
-          )}
-        </ul>
+      <div className="experience__content"
+        style={{
+          display: include ? 'inherit' : 'none'
+        }}
+      >
+        <p className="experience__timeRange">
+          {`${formatTimeRange(props.start, props.end)}`}
+        </p>
+        <ExperienceList jobExperiences={props.jobExperiences}/>
       </div>
     </div>
   )
