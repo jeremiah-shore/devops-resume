@@ -123,11 +123,11 @@
       "job_experiences": [
         {
           "description": "<a href=\"http://coaltmeds.com\" target=\"_blank\">coaltmeds.com</a> | Sept 2020 - Present",
-          "keywords": ["React", "AWS"]
+          "keywords": ["React", "AWS", "material-ui"]
         },
         {
           "description": "<a href=\"http://music.jeremiahshore.net\" target=\"_blank\">music.jeremiahshore.net</a> | Aug 2020 — Present",
-          "keywords": ["React", "AWS"]
+          "keywords": ["React", "AWS", "material-ui"]
         },
         {
           "description": "<a href=\"http://coloradovoicestudios.com\" target=\"_blank\">coloradovoicestudios.com</a> | Jun 2016 - Present",
@@ -357,7 +357,7 @@
   ],
   "projects": [
     {
-      "description": "created means of producing high-quality vinyl decals for visual branding/advertising in personal and freelance projects"
+      "description": "created means of producing high-quality <a href=\"http://dreadfuldecals.com\" target=\"_blank\">vinyl decals</a> for visual branding/advertising in personal and freelance projects"
     },
     {
       "description": "created React web app to manage resume content and quickly optimize my resume for future job applications",
@@ -372,6 +372,15 @@
     },
     {
       "description": "enhanced my existing business card using Unity, Vuforia augmented reality SDK, and custom assets created in Blender"
+    },
+    {
+      "description": "created utility to spin up Unity projects from template, apply specialized Git configuration, and import into GitHub"
+    },
+    {
+      "description": "created utility to crawl web app projects and convert media into next-gen formats (WebP, JPG 2000, JPEG XR)"
+    },
+    {
+      "description": "prototyped potential <a href=\"http://cvs.jeremiahshore.net\" target=\"_blank\">redesign of coloradovoicestudios.com</a> in React using material-ui"
     }
   ],
   "education": [
