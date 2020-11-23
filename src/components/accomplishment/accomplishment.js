@@ -4,8 +4,10 @@ import Chip from "@material-ui/core/Chip";
 export function Accomplishment(props) {
   return (
     <li className={"accomplishment"}>
-      {props.description}
-      
+      <span
+        className="accomplishment__description"
+        dangerouslySetInnerHTML={{__html: props.description}}
+      />
       { (props.keywords && props.keywords.length > 0) &&
         <span>
           { props.keywords.map(k =>
