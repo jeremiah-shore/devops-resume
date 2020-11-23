@@ -4,22 +4,23 @@ import {fetchJsonData} from "../../utils/data";
 import {AdminPanel} from "../admin-panel/admin-panel";
 
 export function App() {
-  const [user, setUser] = useState({});
   const [baseUserData, setBaseUserData] = useState({});
-
+  const [user, setUser] = useState({});
+  useEffect(() => {
+    fetchJsonData('/data/jeremiah_data.json').then(userData => {
+      setBaseUserData(userData);
+      let modifiedUser = deepCopy(userData);
+      modifiedUser = addInclusionFields(modifiedUser);
+      setUser(modifiedUser);
+    });
+  }, []);
+  
   const [highlightKeywords, setHighlightKeywords] = useState(["Java", "React", "AWS"]);
   const addHighlightKeyword = (keyword) => setHighlightKeywords(hkws => [...hkws, keyword]);
   const removeHighlightKeyword = (keyword) => setHighlightKeywords(hkws => hkws.filter(kw => kw !== keyword));
-
+  
   const [enableKeywordHighlights, setEnableKeywordHighlights] = useState(true);
   const toggleKeywordHighlights = () => setEnableKeywordHighlights(prev => !prev);
-  
-  useEffect(() => {
-    fetchJsonData('/data/jeremiah_data.json').then(userData => {
-      setUser(userData);
-      setBaseUserData(userData);
-    });
-  }, []);
   
   return (
     <div className="app-wrapper">
@@ -29,11 +30,6 @@ export function App() {
         removeHighlightKeyword={removeHighlightKeyword}
         enableKeywordHighlights={enableKeywordHighlights}
         toggleKeywordHighlights={toggleKeywordHighlights}
-        
-        updateUser={() => {
-          let filteredUser = JSON.parse(JSON.stringify(baseUserData));
-          setUser(filteredUser);
-        }}
       />
       <Resume
         user={user}
@@ -43,6 +39,18 @@ export function App() {
 }
 
 const deepCopy = (obj) => JSON.parse(JSON.stringify(obj));
+
+function addInclusionFields(user) {
+  let modifiedUser = deepCopy(user);
+  let experiences = modifiedUser.experience;
+  for (let i = 0; i < experiences.length; i++) {
+    if (experiences[i].include === undefined) {
+      experiences[i].include = true;
+    }
+  }
+  modifiedUser.experience = experiences;
+  return modifiedUser;
+}
 
 function filterUserExperiencesByKeywords(user, keywords) {
   let filteredUser = deepCopy(user);

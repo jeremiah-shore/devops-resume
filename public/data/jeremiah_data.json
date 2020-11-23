@@ -270,6 +270,7 @@
         "month": 3,
         "year": 2014
       },
+      "include": false,
       "job_experiences": [
         {
           "description": "in-store / on-site residential and small-business computer, network, and accessory repair",
@@ -289,6 +290,7 @@
         "month": 11,
         "year": 2013
       },
+      "include": false,
       "job_experiences": [
         {
           "description": "on-site hardware diagnostics and repair of Dell branded devices across greater Philadelphia, PA",
@@ -308,6 +310,7 @@
         "month": 9,
         "year": 2013
       },
+      "include": false,
       "job_experiences": [
         {
           "description": "testing, diagnosis, repair, and inventory processing of assorted computer and point-of-sale hardware",
@@ -327,6 +330,7 @@
         "month": 5,
         "year": 2013
       },
+      "include": false,
       "job_experiences": [
         {
           "description": "on-site installation, config, and troubleshooting of network, VoIP, and digital PBX equipment",
@@ -346,6 +350,7 @@
         "month": 4,
         "year": 2012
       },
+      "include": false,
       "job_experiences": [
         {
           "description": "in-store troubleshooting, repair, and sales experience with consumer electronics and repair services",

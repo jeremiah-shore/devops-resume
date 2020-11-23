@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import TextField from "@material-ui/core/TextField";
-import {AddCircle, Build, ExpandLess, ExpandMore} from "@material-ui/icons";
+import {AddCircle} from "@material-ui/icons";
 import Chip from "@material-ui/core/Chip";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import {PanelToggle} from "./panel-toggle/panel-toggle";
 import './admin-panel.scss';
+import {CheckboxControl} from "./checkbox-control/checkbox-control";
 
 export function AdminPanel(props) {
   const [expanded, setExpanded] = useState(false);
@@ -27,21 +28,12 @@ export function AdminPanel(props) {
           toggleExpanded={toggleExpanded}
           label={"ADMIN PANEL"}
         />
-        <FormGroup row>
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={props.enableKeywordHighlights}
-                onChange={() => {
-                  props.toggleKeywordHighlights();
-                }}
-                style={{
-                  color: "#31849b"
-                }}
-              />}
-            label={"enable keyword highlighting"}
-          />
-        </FormGroup>
+        <CheckboxControl
+          label={"enable keyword highlighting"}
+          onChange={props.toggleKeywordHighlights}
+          checked={props.enableKeywordHighlights}
+          color={"#31849b"}
+        />
       </div>
       <div className="admin-panel"
         style={{

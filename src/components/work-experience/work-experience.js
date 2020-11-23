@@ -14,6 +14,7 @@ export function WorkExperience(props) {
           start={exp.start_date}
           end={exp.end_date}
           jobExperiences={exp.job_experiences}
+          include={exp.include}
         />
         )}
     </Section>

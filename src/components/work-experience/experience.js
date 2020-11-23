@@ -1,12 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import './experience.scss';
 import {Accomplishment} from "../accomplishment/accomplishment";
+import IconButton from "@material-ui/core/IconButton";
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
 export function Experience(props) {
+  const [include, setInclude] = useState(props.include);
   return (
     <div className="experience">
       <h3 className="experience__heading">
+        <IconButton
+          onClick={() => setInclude(i => !i)}
+          style={{
+            marginRight: "10px",
+            color: include ? "#7ab356" : "#a20000",
+            backgroundColor: include ? "#dfffcb" : "#ff8787",
+          }}
+        >
+          {include ? <CheckCircleOutlineIcon size={"large"}/> : <HighlightOffIcon size={"large"}/>}
+        </IconButton>
         <span className="experience__heading--job-title">
           {props.jobTitle + ' '}
         </span>
@@ -16,6 +30,7 @@ export function Experience(props) {
           </span>
         }
       </h3>
+      
       <p className="experience__timeRange">
         {`${formatTimeRange(props.start, props.end)}`}
       </p>
