@@ -57,16 +57,19 @@
           "description": "troubleshot and repaired complex issues due to non-RESTful and inconsistent patterns in upstream vendor API "
         },
         {
-          "description": "integrated RESTful zicasso API services into TypeScript SDK using Axios to enable streamlined use in front-end apps"
+          "description": "used Axios to integrate zicasso's RESTful API services into TypeScript SDK to enable streamlined use in front-end apps"
         },
         {
           "description": "separated unit and integration testing environments in TypeScript SDK to ensure build-time stability"
         },
         {
-          "description": "authored a baseline of integration tests using Jest for back-end zicasso services in TypeScript SDK"
+          "description": "authored a baseline of integration tests for back-end zicasso services using Jest in TypeScript SDK"
         },
         {
-          "description": "facilitated phased migration of zicasso.com using CloudFront, Lambda@Edge, and Node to select the desired content origin"
+          "description": "facilitated phased migration of zicasso.com using CloudFront and Lambda@Edge to serve content from the desired origin"
+        },
+        {
+          "description": "enabled smooth office relocation of 20+ employees in Denver by wiring, installing, configuring, and documenting a new network"
         },
         {
           "description": "researched feasibility and technical SEO impacts of routing content with CloudFront and Lambda@Edge"
@@ -90,7 +93,7 @@
           "description": "streamlined deployment process by sending build information and status updates to developer GoogleChat"
         },
         {
-          "description": "hooked into CI/CD pipeline using CloudWatch Events to enhance DevOps processes"
+          "description": "hooked into CI/CD pipeline using AWS CloudWatch Events to enhance DevOps processes"
         },
         {
           "description": "deployed updates to RESTful microservices using serverless architecture on AWS Lambda"
@@ -102,10 +105,7 @@
           "description": "integrated a new upstream vendor API into marageti.com back-end web services as my first major project"
         },
         {
-          "description": "collaborated on a small but high-performing team of talented developers using cutting-edge or bleeding-edge technologies"
-        },
-        {
-          "description": "committed code to multiple repositories, stacks, and applications using Git and GitHub for source control and code management"
+          "description": "committed and managed code changes using Git and GitHub for source control"
         },
         {
           "description": "regularly contributed software features and updates using agile development processes in Kanban and ScrumBan hybrid"
@@ -357,7 +357,7 @@
   ],
   "projects": [
     {
-      "description": "created means of producing high-quality vinyl decals for visual branding and advertising for personal and freelance projects"
+      "description": "created means of producing high-quality vinyl decals for visual branding/advertising in personal and freelance projects"
     },
     {
       "description": "created React web app to manage resume content and quickly optimize my resume for future job applications",
@@ -371,7 +371,7 @@
       "description": "built a web scraper in Node and Puppeteer to gather market research data for a future project related to open mics"
     },
     {
-      "description": "enhanced my existing business card using Unity and Vuforia augmented reality SDK"
+      "description": "enhanced my existing business card using Unity, Vuforia augmented reality SDK, and custom assets created in Blender"
     }
   ],
   "education": [
