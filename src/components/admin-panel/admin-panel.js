@@ -65,16 +65,18 @@ export function AdminPanel(props) {
         }}
       >
         {expanded &&
-          <div style={{ display: "flex", padding: 10 }}>
-            <p style={{ display: "flex", flexDirection: "column", justifyContent: "center", marginRight: 10 }}>highlighted keywords:</p>
-            <div style={{ fontWeight: "300" }}>
-              {props.highlightKeywords?.map(kw =>
-                <DeletableKeywordChip
-                  label={kw}
-                  onDelete={props.removeHighlightKeyword}
-                  key={kw}
-                  style={{ fontSize: "1.5rem", marginRight: 5}}
-                />)}
+          <div style={{ display: "flex", padding: 10, minHeight: 26 }}>
+            <p style={{ ...verticallyAligned, marginRight: 10 }}>highlighted keywords:</p>
+            <div style={verticallyAligned}>
+              <div style={{ fontWeight: "300" }}>
+                {props.highlightKeywords?.map(kw =>
+                  <DeletableKeywordChip
+                    label={kw}
+                    onDelete={props.removeHighlightKeyword}
+                    key={kw}
+                    style={{ fontSize: "1.5rem", marginRight: 5}}
+                  />)}
+              </div>
             </div>
           </div>
         }

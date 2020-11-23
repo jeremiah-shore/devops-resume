@@ -407,13 +407,15 @@
       "description": "built a utility to scrape tweets and analyze grammar for humorous purposes"
     },
     {
-      "description": "completed module of Java Koans (learn coding by coding) to expand syntax and idiomatic knowledge"
+      "description": "completed module of Java Koans to expand knowledge of Java syntax and idioms"
     },
     {
-      "description": "completed first 4 projects of currently retired Full-Stack Java Web Developer TechDegree on teamtreehouse.com"
+      "description": "completed first 4 projects of currently retired Full-Stack Java Web Developer TechDegree on teamtreehouse.com",
+      "include": false
     },
     {
-      "description": "completed multiple years of and many courses/tracks in web development on teamtreehouse.com"
+      "description": "completed multiple years of and many courses/tracks in web development on teamtreehouse.com",
+      "include": false
     }
   ],
   "education": [
