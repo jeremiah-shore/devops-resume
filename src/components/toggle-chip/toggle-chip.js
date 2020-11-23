@@ -31,4 +31,5 @@ export function ToggleChip(props) {
 ToggleChip.propTypes = {
   label: PropTypes.string.isRequired,
   color: PropTypes.string,
+  enableEdit: PropTypes.bool.isRequired,
 };
