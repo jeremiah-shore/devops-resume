@@ -8,18 +8,13 @@ export function Experience(props) {
     <div className="experience">
       <h3 className="experience__heading">
         <span className="experience__heading--job-title">
-          {props.jobTitle} {props.jobTitleActual &&
-            <>
-              <br/>
-              <span className="experience__heading--job-title-actual">
-                {"(" + props.jobTitleActual + ")"}
-              </span>
-            </>
-          }
-        </span><br/>
-        <span className="experience__heading--companyName">
-          {"@ " + props.companyName}
+          {props.jobTitle + ' '}
         </span>
+        { props.companyName &&
+          <span className="experience__heading--companyName">
+            {"@ " + props.companyName}
+          </span>
+        }
       </h3>
       <p className="experience__timeRange">
         {`${formatTimeRange(props.start, props.end)}`}

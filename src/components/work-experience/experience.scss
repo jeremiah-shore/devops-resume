@@ -17,7 +17,9 @@
     }
 
     &--companyName {
-      font-size: 1.7rem;
+      display: inline-block;
+      padding-top: .25em;
+      color: rgba(0,0,0,0.75);
     }
   }
 

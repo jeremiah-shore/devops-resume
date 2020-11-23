@@ -54,7 +54,7 @@
       },
       "job_experiences": [
         {
-          "description": "troubleshot and repaired complex issues due to non-RESTful and inconsistent patterns in upstream vendor API "
+          "description": "troubleshot and repaired complex issues due to non-RESTful and inconsistent (non-OOP) patterns in upstream vendor API "
         },
         {
           "description": "used Axios to integrate zicasso's RESTful API services into TypeScript SDK to enable streamlined use in front-end apps"
@@ -113,8 +113,7 @@
       ]
     },
     {
-      "company": "Misc. & Freelance Web Development",
-      "title": "Web Developer",
+      "title": "Freelance Web Developer",
       "currently_employed": true,
       "start_date": {
         "month": 2,
@@ -159,7 +158,7 @@
         },
         {
           "description": "<a href=\"http://jeremiahshore.net\" target=\"_blank\">jeremiahshore.net</a> | Jun 2013 — Present",
-          "keywords": ["React", "AWS"]
+          "keywords": ["React", "AWS", "material-ui"]
         }
       ]
     },
@@ -381,6 +380,33 @@
     },
     {
       "description": "prototyped potential <a href=\"http://cvs.jeremiahshore.net\" target=\"_blank\">redesign of coloradovoicestudios.com</a> in React using material-ui"
+    },
+    {
+      "description": "protoyped an app in Unity to help memorize multi-string patterns for chords and triads on guitar"
+    },
+    {
+      "description": "built a HATEAOS compliant API using Spring REST for practice (<a href=\"https://github.com/jeremiah-shore/course-reviews-spring\" target=\"_blank\">GitHub</a>)"
+    },
+    {
+      "description": "built a RESTful API using the SparkJava micro web application framework for practice (<a href=\"https://github.com/jeremiah-shore/course-reviews-sparkjava\" target=\"_blank\">GitHub</a>)"
+    },
+    {
+      "description": "practiced learning and implementing various design patterns in Java (<a href=\"https://github.com/jeremiah-shore/design-pattern-practice\" target=\"_blank\">GitHub</a>)"
+    },
+    {
+      "description": "created project to experiment with procedural map generation and UI callbacks in the Unity editor (<a href=\"https://github.com/jeremiah-shore/unity-map-generation-and-ui-callbacks\" target=\"_blank\">GitHub</a>)"
+    },
+    {
+      "description": "built a utility to scrape tweets and analyze grammar for humorous purposes"
+    },
+    {
+      "description": "completed module of Java Koans (learn coding by coding) to expand syntax and idiomatic knowledge"
+    },
+    {
+      "description": "completed first 4 projects of currently retired Full-Stack Java Web Developer TechDegree on teamtreehouse.com"
+    },
+    {
+      "description": "completed multiple years of and many courses/tracks in web development on teamtreehouse.com"
     }
   ],
   "education": [

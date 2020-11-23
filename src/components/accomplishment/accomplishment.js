@@ -9,7 +9,9 @@ export function Accomplishment(props) {
         dangerouslySetInnerHTML={{__html: props.description}}
       />
       { (props.keywords && props.keywords.length > 0) &&
-        <span>
+        <span style={{
+          marginLeft: "5px",
+        }}>
           { props.keywords.map(k =>
             <Chip
               label={k}
