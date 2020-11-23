@@ -7,6 +7,7 @@ import './admin-panel.scss';
 import {CheckboxControl} from "./checkbox-control/checkbox-control";
 import Button from "@material-ui/core/Button";
 import {AdminPanelRow} from "./admin-panel-row";
+import {IconTextField} from "../icon-text-field/icon-text-field";
 
 export function AdminPanel(props) {
   const [expanded, setExpanded] = useState(false);
@@ -43,25 +44,17 @@ export function AdminPanel(props) {
           style={verticallyAligned}
         />
         <div style={verticallyAligned}>
-          <div style={{position: 'relative', display: 'inline-block'}}>
-            <AddCircle style={{position: 'absolute', right: 5, top: 15, width: 20, height: 20, color: "rgba(0,0,0,0.25)"}}/>
-            <TextField
-              label={"add highlight keyword"}
-              style={{
-                width: "300px",
-              }}
-              onKeyDown={e => {
-                if (e.key === 'Enter' && e.target.value) {
-                  e.target.value.split(',')
-                    .map(s => s.trim())
-                    .filter(s => s.length > 0)
-                    .forEach(props.addHighlightKeyword);
-                  e.target.value = '';
-                }
-              }}
-              variant={"outlined"}
-            />
-          </div>
+          <IconTextField
+            icon={<AddCircle style={IconTextField.defaultIconStyle}/>}
+            label={"add highlight keyword"}
+            onEnter={value => {
+              value?.split(',')
+                .map(s => s.trim())
+                .filter(s => s.length > 0)
+                .forEach(props.addHighlightKeyword);
+            }}
+            minWidth={"300px"}
+          />
         </div>
       </div>
       <AdminPanelRow expanded={expanded}>
