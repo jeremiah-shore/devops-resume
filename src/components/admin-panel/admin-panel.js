@@ -34,6 +34,12 @@ export function AdminPanel(props) {
           checked={props.enableKeywordHighlights}
           color={"#31849b"}
         />
+        <CheckboxControl
+          label={"enable editing"}
+          onChange={props.toggleEnableEdit}
+          checked={props.enableEdit}
+          color={"#31849b"}
+        />
       </div>
       <div className="admin-panel"
         style={{

@@ -27,9 +27,11 @@ export function Resume(props) {
         />
         <WorkExperience
           experience={user?.experience}
+          enableEdit={props.enableEdit}
         />
         <PersonalProjects
           projects={user?.projects}
+          enableEdit={props.enableEdit}
         />
         <Education
           education={user?.education}

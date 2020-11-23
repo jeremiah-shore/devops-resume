@@ -9,23 +9,32 @@ import {ExperienceList} from "./experience-list/experience-list";
 
 export function Experience(props) {
   const [include, setInclude] = useState(props.include);
+  const enableEdit = props.enableEdit;
   return (
-    <div className="experience">
+    <div className="experience"
+      style={{
+        display: (!enableEdit && !include) ? "none" : "inherit",
+      }}
+    >
       <h3 className="experience__heading"
-        style={{ position: "relative", left: "-20px" }}
-      >
-        <IconButton
-          onClick={() => setInclude(i => !i)}
-          style={{
-            marginRight: "10px",
-            color: include ? "#7ab356" : "#31849b",
-            backgroundColor: include ? "#dfffcb" : "transparent",
-            border: include ? `1px solid white` : `1px solid #31849b`
+        style={{
+            position: enableEdit ? "relative" : "static",
+            left: enableEdit ? "-32px" : "0",
+            height: "3rem",
           }}
-          size={"large"}
-        >
-          {include ? <CheckCircleOutlineIcon/> : <AddCircleOutlineIcon/>}
-        </IconButton>
+      >
+        { props.enableEdit &&
+          <IconButton
+            onClick={() => setInclude(i => !i)}
+            style={{
+              marginRight: "6px",
+              color: include ? "#7ab356" : "#31849b",
+              backgroundColor: include ? "#dfffcb" : "transparent",
+              border: include ? `1px solid #7ab356` : `1px solid #31849b`,
+            }}
+            size={"large"}
+          />
+        }
         <span className="experience__heading--job-title">
           {props.jobTitle + ' '}
         </span>
@@ -43,7 +52,10 @@ export function Experience(props) {
         <p className="experience__timeRange">
           {`${formatTimeRange(props.start, props.end)}`}
         </p>
-        <ExperienceList jobExperiences={props.jobExperiences}/>
+        <ExperienceList
+          jobExperiences={props.jobExperiences}
+          enableEdit={enableEdit}
+        />
       </div>
     </div>
   )

@@ -6,16 +6,29 @@ import PropTypes from "prop-types";
 export function ExperienceListItem(props) {
   const [checked, setChecked] = useState(props.checked);
   return(
-    <li style={{
-      display: "flex", flexDirection: "row", justifyContent: "flex-start", listStyle: "none"
-    }}>
+    <li style={ props.enableEdit ?
+      {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start", listStyle: "none"
+      } : checked ?
+        {
+          display: "inherit",
+          listStyle: "disc outside none"
+        } :
+        {
+          display: "none"
+        }
+        
+    }>
       <Checkbox
         checked={checked}
         onChange={() => setChecked(c => !c)}
         size={"large"}
         style={{
+          display: props.enableEdit ? "flex" : "none",
           color: "#31849b",
-          padding: "5px",
+          padding: "2px 5px 0 0",
         }}
       />
       {props.accomplishment}
