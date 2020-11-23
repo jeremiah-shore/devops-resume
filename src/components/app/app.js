@@ -4,6 +4,10 @@ import {fetchJsonData} from "../../utils/data";
 import {AdminPanel} from "../admin-panel/admin-panel";
 
 export function App() {
+  const [highlightKeywords, setHighlightKeywords] = useState(["Java", "React", "AWS"]);
+  const addHighlightKeyword = (keyword) => setHighlightKeywords(hkws => [...hkws, keyword]);
+  const removeHighlightKeyword = (keyword) => setHighlightKeywords(hkws => hkws.filter(kw => kw !== keyword));
+  
   const [baseUserData, setBaseUserData] = useState({});
   const [user, setUser] = useState({});
   useEffect(() => {
@@ -11,13 +15,13 @@ export function App() {
       setBaseUserData(userData);
       let modifiedUser = deepCopy(userData);
       modifiedUser = addInclusionFields(modifiedUser);
+      highlightKeywords.forEach(k => {
+        modifiedUser = highlightKeywordInExperienceDescriptions(modifiedUser, k);
+      });
       setUser(modifiedUser);
     });
-  }, []);
+  }, [highlightKeywords]);
   
-  const [highlightKeywords, setHighlightKeywords] = useState(["Java", "React", "AWS"]);
-  const addHighlightKeyword = (keyword) => setHighlightKeywords(hkws => [...hkws, keyword]);
-  const removeHighlightKeyword = (keyword) => setHighlightKeywords(hkws => hkws.filter(kw => kw !== keyword));
   
   const [enableKeywordHighlights, setEnableKeywordHighlights] = useState(true);
   const toggleKeywordHighlights = () => setEnableKeywordHighlights(prev => !prev);
@@ -70,4 +74,23 @@ function filterUserExperiencesByKeywords(user, keywords) {
     filteredExperience.push(exp);
   }
   filteredUser.experience = filteredExperience;
+}
+
+function highlightKeywordInExperienceDescriptions(user, keyword) {
+  let modifiedUser = deepCopy(user);
+  let experiences = modifiedUser.experience;
+  for (let i = 0; i < experiences.length; i++) {
+    let jobExperiences = experiences[i].job_experiences;
+    for (let j = 0; j < jobExperiences.length; j++) {
+      let je = jobExperiences[j];
+      je.description = je.description.replaceAll(keyword, `<span class="keyword-highlight">${keyword}</span>`);
+    }
+  }
+  let projects = modifiedUser.projects;
+  for (let p = 0; p < projects.length; p++) {
+    let project = projects[p];
+    project.description = project.description.replaceAll(keyword, `<span class="keyword-highlight">${keyword}</span>`);
+  }
+  modifiedUser.experience = experiences;
+  return modifiedUser;
 }
