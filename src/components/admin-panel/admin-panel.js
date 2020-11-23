@@ -56,7 +56,9 @@ export function AdminPanel(props) {
                 checked={props.enableKeywordFilters}
                 onChange={() => {
                   props.setFiltersApplied(!props.enableKeywordFilters);
-                  
+                }}
+                style={{
+                  color: "#31849b"
                 }}
               />}
             label={"enable keyword filters"}

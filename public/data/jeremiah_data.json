@@ -93,6 +93,15 @@
           "description": "hooked into CI/CD pipeline using CloudWatch Events to enhance DevOps processes"
         },
         {
+          "description": "deployed updates to RESTful microservices using serverless architecture on AWS Lambda"
+        },
+        {
+          "description": "created, maintained, and enhanced back-end web services in Java using SparkJava \"micro web application framework\""
+        },
+        {
+          "description": "integrated a new upstream vendor API into marageti.com back-end web services as my first major project"
+        },
+        {
           "description": "collaborated on a small but high-performing team of talented developers using cutting-edge or bleeding-edge technologies"
         },
         {
@@ -104,8 +113,8 @@
       ]
     },
     {
-      "company": "Self Employed",
-      "title": "Freelance Web Developer",
+      "company": "Misc. & Freelance Web Development",
+      "title": "Web Developer",
       "currently_employed": true,
       "start_date": {
         "month": 2,
@@ -114,27 +123,43 @@
       "job_experiences": [
         {
           "description": "coaltmeds.com | Sept 2020 - Present",
-          "keywords": ["React", "Node", "JavaScript", "AWS", "CloudFront", "S3", "SSL"]
+          "keywords": ["React", "AWS"]
+        },
+        {
+          "description": "music.jeremiahshore.net | Aug 2020 — Present",
+          "keywords": ["React", "AWS"]
         },
         {
           "description": "coloradovoicestudios.com | Jun 2016 - Present",
-          "keywords": ["WordPress", "HTML", "CSS", "JavaScript", "copy writing"]
+          "keywords": ["WordPress"]
         },
         {
           "description": "creativelycannabis.com | Mar 2019 – Apr 2020",
-          "keywords": ["Bootstrap", "HTML", "CSS", "JavaScript", "jQuery", "copy writing"]
+          "keywords": ["Bootstrap", "jQuery", "BlueHost"]
         },
         {
           "description": "nuvegfood.com | Oct 2018 – Jun 2019",
-          "keywords": ["WIX", "HTML", "CSS"]
+          "keywords": ["WIX"]
         },
         {
           "description": "strictlyusa.com | Dec 2018 – Mar 2019",
-          "keywords": ["3dCart", "HTML", "CSS", "JavaScript"]
+          "keywords": ["3dCart"]
         },
         {
-          "description": "shinspiano.com (retired) | Feb 2014 - Apr 2019\n",
-          "keywords": ["Bootstrap", "HTML", "CSS", "JavaScript", "jQuery", "AWS", "S3", "copy writing"]
+          "description": "friscowine.com (retired) | Nov 2017 — May 2018",
+          "keywords": ["WordPress", "Divi"]
+        },
+        {
+          "description": "shorefiretech.com (retired) | Mar 2014 - Jan 2016",
+          "keywords": ["WordPress"]
+        },
+        {
+          "description": "shinspiano.com (retired) | Feb 2014 - Apr 2019",
+          "keywords": ["Bootstrap", "jQuery", "AWS"]
+        },
+        {
+          "description": "jeremiahshore.net | Jun 2013 — Present",
+          "keywords": ["React", "AWS"]
         }
       ]
     },
@@ -152,8 +177,7 @@
       },
       "job_experiences": [
         {
-          "description": "on-site desktop, server, and network support for multiple Denver-based engineering firms",
-          "keywords": ["server"]
+          "description": "on-site desktop, server, and network support for multiple Denver-based engineering firms"
         }
       ]
     },
@@ -171,8 +195,7 @@
       },
       "job_experiences": [
         {
-          "description": "short-term IT staff and on-site desktop, server, and network support for Denver-based businesses",
-          "keywords": ["server"]
+          "description": "short-term IT staff and on-site desktop, server, and network support for Denver-based businesses"
         }
       ]
     },
@@ -190,32 +213,49 @@
       },
       "job_experiences": [
         {
-          "description": "automated 4G usage reporting through integration with hardware vendor API, enabling significant increase to monthly revenue stream through enforcement of overage charges stated in contracts",
-          "keywords": ["Java", "REST", "OAuth", "JSON", "JavaFX", "API"]
+          "description": "streamlined 4G utilization reporting with a JavaFX app and data scraping via recursive API calls"
         },
         {
-          "description": "bug fixing, product management, design, and ongoing dev for internal software",
-          "keywords": [".NET", "WinForms", "DevExpress", "MSSQL"]
+          "description": "oversaw design and development of new software platforms in cooperation with multiple vendors"
         },
         {
-          "description": "automated data health reports with console app, including email document export to assist in cleanup",
-          "keywords": ["Java", "MSSQL"]
+          "description": "connected to 4G hardware vendor platform using Java, OAuth 2.0 handshake, and API requests via OkHttp"
         },
         {
-          "description": "created effective customer data access powered by regular scripted updates",
-          "keywords": ["Google Sheets", "JavaScript", "MSSQL"]
+          "description": "created manual process for investigating, documenting, and capitalizing on customer 4G data overages"
         },
         {
-          "description": "performed regular database administration, including: reporting, hosting, backups, and maintenance",
-          "keywords": ["MSSQL"]
+          "description": "improved deployment of WinForms application by migrating from local file hosting to ClickOnce"
         },
         {
-          "description": "automated marketing workflows in MailChimp, including a ZOHO integration using Zapier",
-          "keywords": ["marketing", "CRM"]
+          "description": "fixed bugs, enhanced performance, and added features to C# .NET WinForms DevExpress application"
         },
         {
-          "description": "migrated PRTG network monitoring into cloud hosting, dramatically increasing data reliability and accuracy",
-          "keywords": ["AWS", "EC2"]
+          "description": "oversaw vendor bug-fixing and enhancements of custom software that was heavily utilized by Bandwave team"
+        },
+        {
+          "description": "created and automated database health reports using Java console app; emailed CSV results to aid in cleanup"
+        },
+        {
+          "description": "provided secure and unattended data access to customers with JavaScript powered Google Sheets documents"
+        },
+        {
+          "description": "performed regular MSSQL database administration, including: reporting, hosting, backups, and maintenance"
+        },
+        {
+          "description": "integrated ZOHO CRM with MailChimp via Zapier to grow audiences and to increase reach and interaction of campaigns"
+        },
+        {
+          "description": "automated marketing workflows in MailChimp and provided technical assistance to marketing manager"
+        },
+        {
+          "description": "migrated on-prem PRTG network monitoring server to an AWS EC2 instance, dramatically increasing availability and reliability"
+        },
+        {
+          "description": "facilitated website redesign (WordPress) and managed launch process to ensure a seamless transition"
+        },
+        {
+          "description": "maintained multiple WordPress websites with content changes and search engine optimizations"
         }
       ]
     },
@@ -317,12 +357,21 @@
   ],
   "projects": [
     {
-      "description": "web scraper to gather market research data for an app/website related to open mics",
-      "keywords": ["Node", "Puppeteer", "web scraping"]
+      "description": "created means of producing high-quality vinyl decals for visual branding and advertising for personal and freelance projects"
     },
     {
-      "description": "augmented reality business card as a proof of concept and learning experiment",
-      "keywords": ["Unity", "Vuforia", "Blender"]
+      "description": "created React web app to manage resume content and quickly optimize my resume for future job applications",
+      "keywords": ["ResAmaze"]
+    },
+    {
+      "description": "created, applied, and continuously refined a personal task and goal management framework",
+      "keywords": ["OMEGA"]
+    },
+    {
+      "description": "built a web scraper in Node and Puppeteer to gather market research data for a future project related to open mics"
+    },
+    {
+      "description": "enhanced my existing business card using Unity and Vuforia augmented reality SDK"
     }
   ],
   "education": [
@@ -372,5 +421,5 @@
       "status": "expired"
     }
   ],
-  "footnote": "References, work history—including 9+ years of IT industry experience—and certifications made available upon request."
+  "footnote": "References, work history—including 9+ years of IT industry experience—and certification details made available upon request."
 }

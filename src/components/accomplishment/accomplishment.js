@@ -14,8 +14,8 @@ export function Accomplishment(props) {
               variant={"outlined"}
               size={"small"}
               style={{
-                border: "1px solid #31849b",
-                color: "#31849b",
+                border: "1px solid #31849bbb",
+                color: "#31849bbb",
                 margin: "0 0 0 5px",
                 height: "1.6rem",
                 fontWeight: "600",
