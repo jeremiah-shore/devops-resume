@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 export function CheckboxControl(props) {
   return (
-    <div className="checkbox-control">
+    <div className="checkbox-control" style={props.style}>
       <FormGroup row>
         <FormControlLabel
           control={

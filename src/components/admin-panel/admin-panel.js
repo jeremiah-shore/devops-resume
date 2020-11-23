@@ -2,9 +2,6 @@ import React, {useState} from 'react';
 import TextField from "@material-ui/core/TextField";
 import {AddCircle} from "@material-ui/icons";
 import Chip from "@material-ui/core/Chip";
-import Checkbox from "@material-ui/core/Checkbox";
-import FormGroup from "@material-ui/core/FormGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
 import {PanelToggle} from "./panel-toggle/panel-toggle";
 import './admin-panel.scss';
 import {CheckboxControl} from "./checkbox-control/checkbox-control";
@@ -12,7 +9,7 @@ import {CheckboxControl} from "./checkbox-control/checkbox-control";
 export function AdminPanel(props) {
   const [expanded, setExpanded] = useState(false);
   const toggleExpanded = () => setExpanded(v => !v);
-  
+  const verticallyAligned = { display: "flex", flexDirection: "column", justifyContent: "center" };
   return (
     <div className="admin-panel-wrapper" style={{
       position: "fixed",
@@ -27,19 +24,40 @@ export function AdminPanel(props) {
           expanded={expanded}
           toggleExpanded={toggleExpanded}
           label={"ADMIN PANEL"}
+          style={verticallyAligned}
         />
         <CheckboxControl
           label={"toggle keyword highlighting"}
           onChange={props.toggleKeywordHighlights}
           checked={props.enableKeywordHighlights}
           color={"#31849b"}
+          style={verticallyAligned}
         />
         <CheckboxControl
           label={"enable editing"}
           onChange={props.toggleEnableEdit}
           checked={props.enableEdit}
           color={"#31849b"}
+          style={verticallyAligned}
         />
+        <div style={verticallyAligned}>
+          <div style={{position: 'relative', display: 'inline-block'}}>
+            <AddCircle style={{position: 'absolute', right: 5, top: 15, width: 20, height: 20, color: "rgba(0,0,0,0.25)"}}/>
+            <TextField
+              label={"add highlight keyword"}
+              style={{
+                width: "300px",
+              }}
+              onKeyDown={e => {
+                if (e.key === 'Enter' && e.target.value) {
+                  props.addHighlightKeyword(e.target.value);
+                  e.target.value = '';
+                }
+              }}
+              variant={"outlined"}
+            />
+          </div>
+        </div>
       </div>
       <div className="admin-panel"
         style={{
@@ -47,55 +65,18 @@ export function AdminPanel(props) {
         }}
       >
         {expanded &&
-        <>
-          <div
-            className="admin-panel_input"
-            style={{
-              padding: "10px",
-              display: "flex",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <div style={{position: 'relative', display: 'inline-block'}}>
-              <AddCircle style={{position: 'absolute', right: 0, top: 15, width: 20, height: 20, color: "rgba(0,0,0,0.25)"}}/>
-              <TextField
-                label={"add highlight keyword"}
-                style={{
-                  width: "300px",
-                }}
-                onKeyDown={e => {
-                  if (e.key === 'Enter' && e.target.value) {
-                    props.addHighlightKeyword(e.target.value);
-                    e.target.value = '';
-                  }
-                }}
-              />
+          <div style={{ display: "flex", padding: 10 }}>
+            <p style={{ display: "flex", flexDirection: "column", justifyContent: "center", marginRight: 10 }}>highlighted keywords:</p>
+            <div style={{ fontWeight: "300" }}>
+              {props.highlightKeywords?.map(kw =>
+                <DeletableKeywordChip
+                  label={kw}
+                  onDelete={props.removeHighlightKeyword}
+                  key={kw}
+                  style={{ fontSize: "1.5rem", marginRight: 5}}
+                />)}
             </div>
           </div>
-          <div
-            className="admin-panel__output"
-            style={{
-              padding: "10px",
-              display: "flex",
-              justifyContent: "space-evenly",
-              textAlign: "center",
-            }}
-          >
-            <div className="encouraged" style={{ maxWidth: "50%" }}>
-              <p style={{ fontWeight: "600", padding: "1rem" }}>
-                highlighted keywords
-              </p>
-              <div style={{ fontWeight: "300" }}>
-                {props.highlightKeywords?.map(kw =>
-                  <DeletableKeywordChip
-                    label={kw}
-                    onDelete={props.removeHighlightKeyword}
-                    key={kw}
-                  />)}
-              </div>
-            </div>
-          </div>
-        </>
         }
       </div>
     </div>
@@ -107,7 +88,9 @@ function DeletableKeywordChip(props) {
     <Chip
       label={props.label}
       onDelete={() => props.onDelete(props.label)}
-      style={{ fontSize: "1.5rem", margin: "0 5px 10px"}}
+      style={props.style}
+      variant={"outlined"}
+      size={"small"}
     />
   )
 }
