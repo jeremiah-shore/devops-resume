@@ -27,13 +27,17 @@ export function ExperienceListItem(props) {
         size={"large"}
         style={{
           display: props.enableEdit ? "flex" : "none",
-          color: "#31849b",
+          color: containsHighlight(props.description) ? "#ffa700" : "#31849b",
           padding: "2px 5px 0 0",
         }}
       />
       {props.accomplishment}
     </li>
   )
+}
+
+function containsHighlight(description) {
+  return description.indexOf("keyword-highlight") > -1;
 }
 
 ExperienceListItem.propTypes = {
