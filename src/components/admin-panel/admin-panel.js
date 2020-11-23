@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import TextField from "@material-ui/core/TextField";
-import {AddCircle} from "@material-ui/icons";
+import {AddCircle, DeleteSweep} from "@material-ui/icons";
 import Chip from "@material-ui/core/Chip";
 import {PanelToggle} from "./panel-toggle/panel-toggle";
 import './admin-panel.scss';
 import {CheckboxControl} from "./checkbox-control/checkbox-control";
+import Button from "@material-ui/core/Button";
+import {AdminPanelRow} from "./admin-panel-row";
 
 export function AdminPanel(props) {
   const [expanded, setExpanded] = useState(false);
@@ -50,7 +52,10 @@ export function AdminPanel(props) {
               }}
               onKeyDown={e => {
                 if (e.key === 'Enter' && e.target.value) {
-                  props.addHighlightKeyword(e.target.value);
+                  e.target.value.split(',')
+                    .map(s => s.trim())
+                    .filter(s => s.length > 0)
+                    .forEach(props.addHighlightKeyword);
                   e.target.value = '';
                 }
               }}
@@ -59,28 +64,28 @@ export function AdminPanel(props) {
           </div>
         </div>
       </div>
-      <div className="admin-panel"
-        style={{
-          height: expanded ? 'auto' : '0px',
-        }}
-      >
-        {expanded &&
-          <div style={{ display: "flex", padding: 10, minHeight: 26 }}>
-            <p style={{ ...verticallyAligned, marginRight: 10 }}>highlighted keywords:</p>
-            <div style={verticallyAligned}>
-              <div style={{ fontWeight: "300" }}>
-                {props.highlightKeywords?.map(kw =>
-                  <DeletableKeywordChip
-                    label={kw}
-                    onDelete={props.removeHighlightKeyword}
-                    key={kw}
-                    style={{ fontSize: "1.5rem", marginRight: 5}}
-                  />)}
-              </div>
-            </div>
+      <AdminPanelRow expanded={expanded}>
+        <Button
+          startIcon={<DeleteSweep style={{ color: "rgba(0,0,0,0.5)" }}/>}
+          variant={"outlined"}
+          style={{ marginRight: 10, }}
+          onClick={props.clearHighlightKeywords}
+        >
+          clear all
+        </Button>
+        <p style={{ ...verticallyAligned, marginRight: 10 }}>highlighted keywords:</p>
+        <div style={verticallyAligned}>
+          <div style={{ fontWeight: "300" }}>
+            {props.highlightKeywords?.map(kw =>
+              <DeletableKeywordChip
+                label={kw}
+                onDelete={props.removeHighlightKeyword}
+                key={kw}
+                style={{ fontSize: "1.5rem", marginRight: 5}}
+              />)}
           </div>
-        }
-      </div>
+            </div>
+      </AdminPanelRow>
     </div>
   )
 }

@@ -5,8 +5,11 @@ import {AdminPanel} from "../admin-panel/admin-panel";
 
 export function App() {
   const [highlightKeywords, setHighlightKeywords] = useState([]);
-  const addHighlightKeyword = (keyword) => setHighlightKeywords(hkws => [...hkws, keyword]);
+  const addHighlightKeyword = (keyword) => {setHighlightKeywords(hkws => {
+     return (hkws.indexOf(keyword) === -1) ? [...hkws, keyword] : hkws;
+  })};
   const removeHighlightKeyword = (keyword) => setHighlightKeywords(hkws => hkws.filter(kw => kw !== keyword));
+  const clearHighlightKeywords = () => setHighlightKeywords([]);
   
   const [baseUserData, setBaseUserData] = useState({});
   const [user, setUser] = useState({});
@@ -35,6 +38,8 @@ export function App() {
         highlightKeywords={highlightKeywords}
         addHighlightKeyword={addHighlightKeyword}
         removeHighlightKeyword={removeHighlightKeyword}
+        clearHighlightKeywords={clearHighlightKeywords}
+        
         enableKeywordHighlights={enableKeywordHighlights}
         toggleKeywordHighlights={toggleKeywordHighlights}
         enableEdit={enableEdit}
