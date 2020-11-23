@@ -54,24 +54,52 @@
       },
       "job_experiences": [
         {
-          "description": "contributed to custom SDK, including back-end services and integration testing",
-          "keywords": ["TypeScript", "Node", "API", "Jest", "Axios", "integration", "SDK"]
+          "description": "troubleshot and repaired complex issues due to non-RESTful and inconsistent patterns in upstream vendor API "
         },
         {
-          "description": "enabled phased migration support of multi-million dollar zicasso.com",
-          "keywords": ["CloudFront", "Lambda", "Lambda@Edge", "CloudFormation", "Node", "Axios", "API", "serverless"]
+          "description": "integrated RESTful zicasso API services into TypeScript SDK using Axios to enable streamlined use in front-end apps"
         },
         {
-          "description": "implemented discounts and promotions on marageti.com through multiple vendor integrations and updates across its full stack",
-          "keywords": ["Java", "SparkJava", "Lambda", "CloudFormation", "API", "REST", "Angular"]
+          "description": "separated unit and integration testing environments in TypeScript SDK to ensure build-time stability"
         },
         {
-          "description": "enhanced CI/CD lifecycle with features and notifications to development team, including results from Google PageSpeedInsights",
-          "keywords": ["CloudWatch Events", "CodePipeline", "CodeBuild", "Lambda", "Node", "API"]
+          "description": "authored a baseline of integration tests using Jest for back-end zicasso services in TypeScript SDK"
         },
         {
-          "description": "collaborated on a small team of talented developers using cutting-edge and bleeding-edge technologies using an agile hybrid process of scrum and kanban",
-          "keywords": ["agile", "scrum", "kanban", "scrum-ban"]
+          "description": "facilitated phased migration of zicasso.com using CloudFront, Lambda@Edge, and Node to select the desired content origin"
+        },
+        {
+          "description": "researched feasibility and technical SEO impacts of routing content with CloudFront and Lambda@Edge"
+        },
+        {
+          "description": "added back-end services to enable display of travel discounts and promotions on marageti.com"
+        },
+        {
+          "description": "integrated discount data from multiple upstream vendor APIs using Java and SparkJava"
+        },
+        {
+          "description": "maintained multiple front-end and back-end application stacks by creating and maintaining AWS CloudFormation templates"
+        },
+        {
+          "description": "deployed application updates with and maintained CI/CD pipelines using AWS CodeBuild and CodePipeline"
+        },
+        {
+          "description": "automated web app performance tracking by integrating Google PageSpeedInsights into CI/CD lifecycle"
+        },
+        {
+          "description": "streamlined deployment process by sending build information and status updates to developer GoogleChat"
+        },
+        {
+          "description": "hooked into CI/CD pipeline using CloudWatch Events to enhance DevOps processes"
+        },
+        {
+          "description": "collaborated on a small but high-performing team of talented developers using cutting-edge or bleeding-edge technologies"
+        },
+        {
+          "description": "committed code to multiple repositories, stacks, and applications using Git and GitHub for source control and code management"
+        },
+        {
+          "description": "regularly contributed software features and updates using agile development processes in Kanban and ScrumBan hybrid"
         }
       ]
     },
@@ -86,7 +114,7 @@
       "job_experiences": [
         {
           "description": "coaltmeds.com | Sept 2020 - Present",
-          "keywords": ["React", "Node", "JavaScript", "Helmut", "AWS", "CloudFront", "S3", "SSL"]
+          "keywords": ["React", "Node", "JavaScript", "AWS", "CloudFront", "S3", "SSL"]
         },
         {
           "description": "coloradovoicestudios.com | Jun 2016 - Present",

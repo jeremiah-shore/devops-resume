@@ -14,7 +14,7 @@ export function AdminPanel(props) {
   const discouragedKeywords = props.discouragedKeywordsl;
   const setDiscouragedKeywords = props.setDiscouragedKeywords;
   
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   
   const addEkw = keyword => setEncouragedKeywords(encouragedKeywords => [...encouragedKeywords, keyword]);
   const addDkw = keyword => setDiscouragedKeywords(discouragedKeywords => [...discouragedKeywords, keyword]);
