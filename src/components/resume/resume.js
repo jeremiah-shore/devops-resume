@@ -24,6 +24,7 @@ export function Resume(props) {
         <SkillSection
           skills={user?.skills}
           title={"Technical Skills"}
+          enableEdit={props.enableEdit}
         />
         <WorkExperience
           experience={user?.experience}

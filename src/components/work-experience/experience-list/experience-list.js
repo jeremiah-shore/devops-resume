@@ -14,7 +14,13 @@ export function ExperienceList(props) {
             description={jobExp.description}
             keywords={jobExp.keywords}
             checked={jobExp.include === undefined ? true : jobExp.include }
-            accomplishment={<Accomplishment description={jobExp.description} keywords={jobExp.keywords}/>}
+            accomplishment={
+              <Accomplishment
+                description={jobExp.description}
+                keywords={jobExp.keywords}
+                enableEdit={enableEdit}
+              />
+            }
             enableEdit={enableEdit}
           />
         )}

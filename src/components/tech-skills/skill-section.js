@@ -11,6 +11,7 @@ export function SkillSection(props) {
         <SkillList>
           {props.skills?.map(skillList =>
             <SkillLi
+              enableEdit={props.enableEdit}
               title={skillList?.label}
               skills={skillList?.skills}
             />
