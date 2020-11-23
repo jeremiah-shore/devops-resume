@@ -4,7 +4,7 @@ import {fetchJsonData} from "../../utils/data";
 import {AdminPanel} from "../admin-panel/admin-panel";
 
 export function App() {
-  const [highlightKeywords, setHighlightKeywords] = useState(["Java", "React", "AWS"]);
+  const [highlightKeywords, setHighlightKeywords] = useState([]);
   const addHighlightKeyword = (keyword) => setHighlightKeywords(hkws => [...hkws, keyword]);
   const removeHighlightKeyword = (keyword) => setHighlightKeywords(hkws => hkws.filter(kw => kw !== keyword));
   
