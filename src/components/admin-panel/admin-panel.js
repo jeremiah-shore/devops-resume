@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
-import TextField from "@material-ui/core/TextField";
 import {AddCircle, DeleteSweep} from "@material-ui/icons";
 import Chip from "@material-ui/core/Chip";
 import {PanelToggle} from "./panel-toggle/panel-toggle";
-import './admin-panel.scss';
 import {CheckboxControl} from "./checkbox-control/checkbox-control";
 import Button from "@material-ui/core/Button";
 import {AdminPanelRow} from "./admin-panel-row";
 import {IconTextField} from "../icon-text-field/icon-text-field";
+import {PrimaryAdminPanelControls} from "./primary-admin-panel-controls";
 
 export function AdminPanel(props) {
   const [expanded, setExpanded] = useState(false);
@@ -22,41 +21,37 @@ export function AdminPanel(props) {
       zIndex: 10,
       boxShadow: "0 0 10px 0 black",
     }}>
-      <div className="main-controls" style={{ display: "flex", flexDirection: "row", padding: "10px 0"}}>
+      <PrimaryAdminPanelControls>
         <PanelToggle
           expanded={expanded}
           toggleExpanded={toggleExpanded}
           label={"ADMIN PANEL"}
-          style={verticallyAligned}
         />
         <CheckboxControl
           label={"toggle keyword highlighting"}
           onChange={props.toggleKeywordHighlights}
           checked={props.enableKeywordHighlights}
           color={"#31849b"}
-          style={verticallyAligned}
         />
         <CheckboxControl
           label={"enable editing"}
           onChange={props.toggleEnableEdit}
           checked={props.enableEdit}
           color={"#31849b"}
-          style={verticallyAligned}
         />
-        <div style={verticallyAligned}>
-          <IconTextField
-            icon={<AddCircle style={IconTextField.defaultIconStyle}/>}
-            label={"add highlight keyword"}
-            onEnter={value => {
-              value?.split(',')
-                .map(s => s.trim())
-                .filter(s => s.length > 0)
-                .forEach(props.addHighlightKeyword);
-            }}
-            minWidth={"300px"}
-          />
-        </div>
-      </div>
+        <IconTextField
+          icon={<AddCircle style={IconTextField.defaultIconStyle}/>}
+          label={"add highlight keyword"}
+          onEnter={value => {
+            value?.split(',')
+              .map(s => s.trim())
+              .filter(s => s.length > 0)
+              .forEach(props.addHighlightKeyword);
+          }}
+          style={{ width: "300px" }}
+        />
+      </PrimaryAdminPanelControls>
+      
       <AdminPanelRow expanded={expanded}>
         <Button
           startIcon={<DeleteSweep style={{ color: "rgba(0,0,0,0.5)" }}/>}

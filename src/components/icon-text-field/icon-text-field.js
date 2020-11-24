@@ -5,23 +5,25 @@ import {SvgIcon} from "@material-ui/core";
 
 export function IconTextField(props) {
   return(
-    <div style={{
-      ...props.style,
-      position: 'relative',
-      display: 'inline-block',
-    }}>
-      {props.icon}
-      <TextField
-        label={props.label}
-        style={{ minWidth: props.minWidth ? props.minWidth : "fit-content", }}
-        onKeyDown={e => {
-          if (e.key === 'Enter' && e.target.value) {
-            props.onEnter(e.target.value);
-            e.target.value = '';
-          }
-        }}
-        variant={"outlined"}
-      />
+    <div style={{ ...props.style, }}>
+      <div style={{
+        ...props.style,
+        position: 'relative',
+        display: 'inline-block',
+      }}>
+        {props.icon}
+        <TextField
+          label={props.label}
+          style={{ width: "100%" }}
+          onKeyDown={e => {
+            if (e.key === 'Enter' && e.target.value) {
+              props.onEnter(e.target.value);
+              e.target.value = '';
+            }
+          }}
+          variant={"outlined"}
+        />
+      </div>
     </div>
   )
 }
@@ -32,5 +34,4 @@ IconTextField.propTypes = {
   icon: PropTypes.instanceOf(SvgIcon).isRequired,
   label: PropTypes.string.isRequired,
   onEnter: PropTypes.func.isRequired,
-  minWidth: PropTypes.string,
 };
