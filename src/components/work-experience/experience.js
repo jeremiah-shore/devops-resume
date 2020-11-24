@@ -55,6 +55,7 @@ export function Experience(props) {
         <ExperienceList
           jobExperiences={props.jobExperiences}
           enableEdit={enableEdit}
+          highlightKeywords={props.highlightKeywords}
         />
       </div>
     </div>

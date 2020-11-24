@@ -25,14 +25,17 @@ export function Resume(props) {
           skills={user?.skills}
           title={"Technical Skills"}
           enableEdit={props.enableEdit}
+          highlightKeywords={props.highlightKeywords}
         />
         <WorkExperience
           experience={user?.experience}
           enableEdit={props.enableEdit}
+          highlightKeywords={props.highlightKeywords}
         />
         <PersonalProjects
           projects={user?.projects}
           enableEdit={props.enableEdit}
+          highlightKeywords={props.highlightKeywords}
         />
         <Education
           education={user?.education}

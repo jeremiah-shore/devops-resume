@@ -14,6 +14,7 @@ export function SkillSection(props) {
               enableEdit={props.enableEdit}
               title={skillList?.label}
               skills={skillList?.skills}
+              highlightKeywords={props.highlightKeywords}
             />
           )}
         </SkillList>

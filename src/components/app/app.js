@@ -48,6 +48,7 @@ export function App() {
       <Resume
         user={user}
         enableEdit={enableEdit}
+        highlightKeywords={highlightKeywords}
       />
     </div>
   )

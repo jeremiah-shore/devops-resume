@@ -8,6 +8,7 @@ export function PersonalProjects(props) {
       <ExperienceList
         jobExperiences={props.projects}
         enableEdit={props.enableEdit}
+        highlightKeywords={props.highlightKeywords}
       />
     </Section>
   )

@@ -14,7 +14,11 @@ export function Accomplishment(props) {
           marginLeft: "5px",
         }}>
           { props.keywords.map(k =>
-            <ToggleChip label={k} enableEdit={props.enableEdit}/>
+            <ToggleChip
+              label={k}
+              enableEdit={props.enableEdit}
+              highlightKeywords={props.highlightKeywords}
+            />
           )}
         </span>
       }

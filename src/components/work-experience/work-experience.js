@@ -16,6 +16,7 @@ export function WorkExperience(props) {
           jobExperiences={exp.job_experiences}
           include={exp.include}
           enableEdit={props.enableEdit}
+          highlightKeywords={props.highlightKeywords}
         />
         )}
     </Section>

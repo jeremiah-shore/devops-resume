@@ -19,6 +19,7 @@ export function ExperienceList(props) {
                 description={jobExp.description}
                 keywords={jobExp.keywords}
                 enableEdit={enableEdit}
+                highlightKeywords={props.highlightKeywords}
               />
             }
             enableEdit={enableEdit}

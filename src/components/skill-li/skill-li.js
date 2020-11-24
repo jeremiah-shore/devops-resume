@@ -12,7 +12,11 @@ export function SkillLi(props) {
       </span>
       <span className="skill-li__skills">
         {props.skills.map(s =>
-          <ToggleChip label={s} enableEdit={enableEdit}/>
+          <ToggleChip
+            label={s}
+            enableEdit={enableEdit}
+            highlightKeywords={props.highlightKeywords}
+          />
         )}
       </span>
     </li>
