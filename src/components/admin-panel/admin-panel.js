@@ -6,7 +6,6 @@ import {CheckboxControl} from "./checkbox-control/checkbox-control";
 import Button from "@material-ui/core/Button";
 import {AdminPanelRow} from "./admin-panel-row";
 import {IconTextField} from "../icon-text-field/icon-text-field";
-import {PrimaryAdminPanelControls} from "./primary-admin-panel-controls";
 
 export function AdminPanel(props) {
   const [expanded, setExpanded] = useState(false);
@@ -21,7 +20,7 @@ export function AdminPanel(props) {
       zIndex: 10,
       boxShadow: "0 0 10px 0 black",
     }}>
-      <PrimaryAdminPanelControls>
+      <AdminPanelRow expanded={true}>
         <PanelToggle
           expanded={expanded}
           toggleExpanded={toggleExpanded}
@@ -50,26 +49,37 @@ export function AdminPanel(props) {
           }}
           style={{ width: "300px" }}
         />
-      </PrimaryAdminPanelControls>
+      </AdminPanelRow>
       
       <AdminPanelRow expanded={expanded}>
         <Button
           startIcon={<DeleteSweep style={{ color: "rgba(0,0,0,0.5)" }}/>}
           variant={"outlined"}
-          style={{ marginRight: 10, }}
           onClick={props.clearHighlightKeywords}
+          style={{ minWidth: "150px"}}
         >
           clear all
         </Button>
-        <p style={{ ...verticallyAligned, marginRight: 10 }}>highlighted keywords:</p>
-        <div style={verticallyAligned}>
-          <div style={{ fontWeight: "300" }}>
+        <p style={{
+          ...verticallyAligned,
+          marginRight: 10,
+          minWidth: 170,
+          textAlign: "right",
+        }}>
+          highlighted keywords:
+        </p>
+        <div style={{ ...verticallyAligned, textAlign: "left", }}>
+          <div style={{ fontWeight: "300", }}>
             {props.highlightKeywords?.map(kw =>
               <DeletableKeywordChip
                 label={kw}
                 onDelete={props.removeHighlightKeyword}
                 key={kw}
-                style={{ fontSize: "1.5rem", marginRight: 5}}
+                style={{
+                  fontSize: "1.5rem",
+                  marginRight: 5,
+                  marginBottom: 5,
+                }}
               />)}
           </div>
             </div>

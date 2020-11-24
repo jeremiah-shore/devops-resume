@@ -6,10 +6,24 @@ export function AdminPanelRow(props) {
   return (
     <div style={{ ...props.style,
       height: expanded ? 'auto' : '0px',
+      display: "flex",
+      flexDirection: "row",
+      padding: expanded ? "10px 0" : 0
     }}>
-      <div style={{ display: "flex", padding: 10, minHeight: 26 }}>
-        { expanded && props.children }
-      </div>
+      { (expanded && props.children) &&
+        props.children.map(child => (
+          <div
+            style={{
+              padding: "0 10px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            {child}
+          </div>
+        ))
+      }
     </div>
   )
 }
