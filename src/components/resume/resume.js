@@ -12,6 +12,16 @@ export function Resume(props) {
   const user = props.user;
   return (
     <div className="resume__container">
+      { props.enableKeywordHighlights &&
+        <style>
+          {`
+            .keyword-highlight {
+              background-color: #ffd992;
+              border-bottom: 2px solid #ffa700;
+            }
+          `}
+        </style>
+      }
       <div className="resume__wrapper">
         <Header
           name={`${user?.first_name} ${user?.last_name}`}

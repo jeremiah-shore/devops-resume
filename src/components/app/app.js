@@ -49,6 +49,7 @@ export function App() {
         user={user}
         enableEdit={enableEdit}
         highlightKeywords={highlightKeywords}
+        enableKeywordHighlights={enableKeywordHighlights}
       />
     </div>
   )

@@ -27,7 +27,7 @@ export function AdminPanel(props) {
           label={"ADMIN PANEL"}
         />
         <CheckboxControl
-          label={"toggle keyword highlighting"}
+          label={"toggle keyword highlighting in text"}
           onChange={props.toggleKeywordHighlights}
           checked={props.enableKeywordHighlights}
           color={"#31849b"}
