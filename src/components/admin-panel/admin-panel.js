@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {AddCircle, DeleteSweep} from "@material-ui/icons";
+import {AddCircle, DeleteSweep, HighlightOff} from "@material-ui/icons";
 import Chip from "@material-ui/core/Chip";
 import {PanelToggle} from "./panel-toggle/panel-toggle";
 import {CheckboxControl} from "./checkbox-control/checkbox-control";
@@ -62,27 +62,19 @@ export function AdminPanel(props) {
         </Button>
         <p style={{
           ...verticallyAligned,
-          marginRight: 10,
           minWidth: 170,
           textAlign: "right",
         }}>
           highlighted keywords:
         </p>
-        <div style={{ ...verticallyAligned, textAlign: "left", }}>
-          <div style={{ fontWeight: "300", }}>
-            {props.highlightKeywords?.map(kw =>
-              <DeletableKeywordChip
-                label={kw}
-                onDelete={props.removeHighlightKeyword}
-                key={kw}
-                style={{
-                  fontSize: "1.5rem",
-                  marginRight: 5,
-                  marginBottom: 5,
-                }}
-              />)}
-          </div>
-            </div>
+        <div style={{ fontWeight: "300", }}>
+          {props.highlightKeywords?.map(kw =>
+            <DeletableKeywordChip
+              label={kw}
+              onDelete={props.removeHighlightKeyword}
+              key={kw}
+            />)}
+        </div>
       </AdminPanelRow>
     </div>
   )
@@ -93,9 +85,13 @@ function DeletableKeywordChip(props) {
     <Chip
       label={props.label}
       onDelete={() => props.onDelete(props.label)}
-      style={props.style}
+      style={{
+        ...props.style,
+        fontSize: "1.5rem",
+        margin: 2,
+      }}
       variant={"outlined"}
-      size={"small"}
+      size={"large"}
     />
   )
 }
