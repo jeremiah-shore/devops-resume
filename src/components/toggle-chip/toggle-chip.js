@@ -44,7 +44,3 @@ ToggleChip.propTypes = {
   color: PropTypes.string,
   enableEdit: PropTypes.bool.isRequired,
 };
-
-// border: 1px solid rgba(0,0,0,0.5);
-// color: rgba(0,0,0,0.5);
-// background-color: #ffd992;
