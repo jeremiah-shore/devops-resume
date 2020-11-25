@@ -4,7 +4,6 @@ import './skill-li.scss';
 import {ToggleChip} from "../toggle-chip/toggle-chip";
 
 export function SkillLi(props) {
-  const enableEdit = props.enableEdit;
   return (
     <li className="skill-li">
       <span className="skill-li__title">
@@ -14,7 +13,6 @@ export function SkillLi(props) {
         {props.skills.map(s =>
           <ToggleChip
             label={s}
-            enableEdit={enableEdit}
             highlightKeywords={props.highlightKeywords}
           />
         )}

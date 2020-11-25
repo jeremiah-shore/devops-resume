@@ -25,13 +25,6 @@ export function App() {
     });
   }, [highlightKeywords]);
   
-  
-  const [enableKeywordHighlights, setEnableKeywordHighlights] = useState(true);
-  const toggleKeywordHighlights = () => setEnableKeywordHighlights(prev => !prev);
-  
-  const [enableEdit, setEnableEdit] = useState(false);
-  const toggleEnableEdit = () => setEnableEdit(e => !e);
-  
   return (
     <div className="app-wrapper">
       <AdminPanel
@@ -39,17 +32,10 @@ export function App() {
         addHighlightKeyword={addHighlightKeyword}
         removeHighlightKeyword={removeHighlightKeyword}
         clearHighlightKeywords={clearHighlightKeywords}
-        
-        enableKeywordHighlights={enableKeywordHighlights}
-        toggleKeywordHighlights={toggleKeywordHighlights}
-        enableEdit={enableEdit}
-        toggleEnableEdit={toggleEnableEdit}
       />
       <Resume
         user={user}
-        enableEdit={enableEdit}
         highlightKeywords={highlightKeywords}
-        enableKeywordHighlights={enableKeywordHighlights}
       />
     </div>
   )

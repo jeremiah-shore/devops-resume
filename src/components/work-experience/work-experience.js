@@ -15,7 +15,6 @@ export function WorkExperience(props) {
           end={exp.end_date}
           jobExperiences={exp.job_experiences}
           include={exp.include}
-          enableEdit={props.enableEdit}
           highlightKeywords={props.highlightKeywords}
         />
         )}

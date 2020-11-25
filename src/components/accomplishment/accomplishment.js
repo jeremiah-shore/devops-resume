@@ -16,7 +16,6 @@ export function Accomplishment(props) {
           { props.keywords.map(k =>
             <ToggleChip
               label={k}
-              enableEdit={props.enableEdit}
               highlightKeywords={props.highlightKeywords}
             />
           )}

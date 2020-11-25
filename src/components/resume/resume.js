@@ -7,12 +7,16 @@ import {Education} from "../education/education";
 import {Footer} from "../footer/footer";
 import './resume.scss';
 import {VisitorCount} from "../visitor-count/visitor-count";
+import {useSelector} from "react-redux";
+import {selectIsHighlightingEnabled} from "../app/highligher-slice";
 
 export function Resume(props) {
+  const isHighlightingEnabled = useSelector(selectIsHighlightingEnabled);
+  
   const user = props.user;
   return (
     <div className="resume__container">
-      { props.enableKeywordHighlights &&
+      { isHighlightingEnabled &&
         <style>
           {`
             .keyword-highlight {
@@ -34,17 +38,14 @@ export function Resume(props) {
         <SkillSection
           skills={user?.skills}
           title={"Technical Skills"}
-          enableEdit={props.enableEdit}
           highlightKeywords={props.highlightKeywords}
         />
         <WorkExperience
           experience={user?.experience}
-          enableEdit={props.enableEdit}
           highlightKeywords={props.highlightKeywords}
         />
         <PersonalProjects
           projects={user?.projects}
-          enableEdit={props.enableEdit}
           highlightKeywords={props.highlightKeywords}
         />
         <Education

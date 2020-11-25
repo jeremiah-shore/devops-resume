@@ -1,9 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import Chip from "@material-ui/core/Chip";
 import PropTypes from "prop-types";
+import {selectIsEditingEnabled} from "../app/editor-slice";
+import {useSelector} from "react-redux";
+import {useDispatch} from "react-redux/src";
 
 export function ToggleChip(props) {
-  const enableEdit = props.enableEdit;
+  const isEditingEnabled = useSelector(selectIsEditingEnabled());
+  
   const [enabled, setEnabled] = useState(true);
   const highlightKeywords = props.highlightKeywords;
   
@@ -29,11 +33,11 @@ export function ToggleChip(props) {
         height: "1.8rem",
         fontWeight: "300",
         fontSize: "1.4rem",
-        display: (!enableEdit && !enabled) ? "none" : "inline-flex",
+        display: (!isEditingEnabled && !enabled) ? "none" : "inline-flex",
       }}
-      clickable={enableEdit}
+      clickable={isEditingEnabled}
       onClick={() => {
-        if (enableEdit) setEnabled(e => !e);
+        if (isEditingEnabled) setEnabled(e => !e);
       }}
     />
   )
@@ -42,5 +46,4 @@ export function ToggleChip(props) {
 ToggleChip.propTypes = {
   label: PropTypes.string.isRequired,
   color: PropTypes.string,
-  enableEdit: PropTypes.bool.isRequired,
 };

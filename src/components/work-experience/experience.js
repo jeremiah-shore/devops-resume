@@ -2,24 +2,24 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import './experience.scss';
 import IconButton from "@material-ui/core/IconButton";
-import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import '../../styles/colors.scss';
 import {ExperienceList} from "./experience-list/experience-list";
+import {useSelector} from "react-redux";
+import {selectIsEditingEnabled} from "../app/editor-slice";
 
 export function Experience(props) {
+  const isEditingEnabled = useSelector(selectIsEditingEnabled());
   const [include, setInclude] = useState(props.include);
-  const enableEdit = props.enableEdit;
   return (
     <div className="experience"
       style={{
-        display: (!enableEdit && !include) ? "none" : "inherit",
+        display: (!isEditingEnabled && !include) ? "none" : "inherit",
       }}
     >
       <h3 className="experience__heading"
         style={{
-            position: enableEdit ? "relative" : "static",
-            left: enableEdit ? "-32px" : "0",
+            position: isEditingEnabled ? "relative" : "static",
+            left: isEditingEnabled ? "-32px" : "0",
             height: "3rem",
           }}
       >
@@ -54,7 +54,6 @@ export function Experience(props) {
         </p>
         <ExperienceList
           jobExperiences={props.jobExperiences}
-          enableEdit={enableEdit}
           highlightKeywords={props.highlightKeywords}
         />
       </div>
@@ -76,6 +75,5 @@ Experience.propTypes = {
   jobTitle: PropTypes.string.isRequired,
   companyName: PropTypes.string.isRequired,
   timeRange: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
   jobTitleActual: PropTypes.string,
 };

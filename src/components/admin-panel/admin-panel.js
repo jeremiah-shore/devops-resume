@@ -1,13 +1,20 @@
 import React, {useState} from 'react';
-import {AddCircle, DeleteSweep, HighlightOff} from "@material-ui/icons";
+import {AddCircle, DeleteSweep} from "@material-ui/icons";
 import Chip from "@material-ui/core/Chip";
 import {PanelToggle} from "./panel-toggle/panel-toggle";
 import {CheckboxControl} from "./checkbox-control/checkbox-control";
 import Button from "@material-ui/core/Button";
 import {AdminPanelRow} from "./admin-panel-row";
 import {IconTextField} from "../icon-text-field/icon-text-field";
+import {useDispatch, useSelector} from "react-redux";
+import {selectIsEditingEnabled, toggle as toggleEditing} from "../app/editor-slice";
+import {selectIsHighlightingEnabled, toggle as toggleHighlighting} from '../app/highligher-slice';
 
 export function AdminPanel(props) {
+  const isEditingEnabled = useSelector(selectIsEditingEnabled);
+  const isHighlightingEnabled = useSelector(selectIsHighlightingEnabled);
+  const dispatch = useDispatch();
+  
   const [expanded, setExpanded] = useState(false);
   const toggleExpanded = () => setExpanded(v => !v);
   const verticallyAligned = { display: "flex", flexDirection: "column", justifyContent: "center" };
@@ -28,14 +35,14 @@ export function AdminPanel(props) {
         />
         <CheckboxControl
           label={"toggle keyword highlighting in text"}
-          onChange={props.toggleKeywordHighlights}
-          checked={props.enableKeywordHighlights}
+          onChange={() => dispatch(toggleHighlighting())}
+          checked={isHighlightingEnabled}
           color={"#31849b"}
         />
         <CheckboxControl
           label={"enable editing"}
-          onChange={props.toggleEnableEdit}
-          checked={props.enableEdit}
+          onChange={() => dispatch(toggleEditing())}
+          checked={isEditingEnabled}
           color={"#31849b"}
         />
         <IconTextField

@@ -1,13 +1,15 @@
 import React from 'react';
 import {Accomplishment} from "../../accomplishment/accomplishment";
 import {ExperienceListItem} from "./experience-list-item";
+import {useSelector} from "react-redux";
+import {selectIsEditingEnabled} from "../../app/editor-slice";
 
 export function ExperienceList(props) {
-  const enableEdit = props.enableEdit;
+  const isEditingEnabled = useSelector(selectIsEditingEnabled());
   return (
     <div className="experience__list">
       <ul style={{
-        margin: enableEdit ? 0 : '0 0 0 2rem',
+        margin: isEditingEnabled ? 0 : '0 0 0 2rem',
       }}>
         {props.jobExperiences?.map(jobExp =>
           <ExperienceListItem
@@ -18,11 +20,9 @@ export function ExperienceList(props) {
               <Accomplishment
                 description={jobExp.description}
                 keywords={jobExp.keywords}
-                enableEdit={enableEdit}
                 highlightKeywords={props.highlightKeywords}
               />
             }
-            enableEdit={enableEdit}
           />
         )}
       </ul>
